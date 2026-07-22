@@ -1,7 +1,7 @@
 import "./Footer.css";
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Instagram, Facebook, Twitter } from "lucide-react";
-import logo from "@/assets/logo.asset.json";
+import logoUrl from "@/assets/logo.jpeg";
 import { CONTACT } from "@/lib/contact";
 function Footer() {
   return <footer className="relative mt-20 border-t border-chai-orange/20 bg-chai-charcoal">
@@ -10,7 +10,7 @@ function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={logo.url} alt="Chaiway" className="h-12 w-12 rounded-full ring-2 ring-chai-orange/50" />
+              <img src={logoUrl} alt="Chaiway" className="h-12 w-12 rounded-full ring-2 ring-chai-orange/50" />
               <div>
                 <p className="font-display font-bold text-xl text-chai-cream">Chaiway Café</p>
                 <p className="text-xs text-chai-gold tracking-wider uppercase">Chai Bolti Hai..!</p>

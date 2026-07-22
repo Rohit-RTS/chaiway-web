@@ -1,7 +1,7 @@
 import "./MediaTrust.css";
 import { motion } from "framer-motion";
 import { Award, FileCheck, Newspaper, Building } from "lucide-react";
-import businessCard from "@/assets/business-card.asset.json";
+import businessCardUrl from "@/assets/business-card.jpeg";
 import { SectionHeading } from "./SectionHeading";
 import { CONTACT } from "@/lib/contact";
 function MediaTrust() {
@@ -35,7 +35,7 @@ function MediaTrust() {
             <p className="mt-5 text-[11px] text-chai-muted/70 italic">Certificates and legal documents are verified before publication.</p>
           </div>
           <div className="rounded-2xl overflow-hidden border border-chai-orange/30">
-            <img src={businessCard.url} alt="Chaiway founder business card" className="h-full w-full object-cover" />
+            <img src={businessCardUrl} alt="Chaiway founder business card" className="h-full w-full object-cover" />
           </div>
         </motion.div>
       </div>

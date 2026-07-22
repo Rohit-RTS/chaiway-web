@@ -2,9 +2,9 @@ import "./Hero.css";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
-import logo from "@/assets/logo.asset.json";
-import storefront from "@/assets/storefront.asset.json";
-import interior from "@/assets/interior.asset.json";
+import logoUrl from "@/assets/logo.jpeg";
+import storefrontUrl from "@/assets/storefront.jpeg";
+import interiorUrl from "@/assets/interior.jpeg";
 import { buildWhatsAppLink } from "@/lib/contact";
 const chips = ["No Royalty", "POS Software", "Chef-Less Model", "Own Recipes", "Training Support", "Zomato + Swiggy", "Low Investment"];
 function Hero() {
@@ -81,7 +81,7 @@ function Hero() {
     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
     className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 sm:h-72 sm:w-72 rounded-full overflow-hidden ring-4 ring-chai-orange/60 glow-orange"
   >
-              <img src={logo.url} alt="Chaiway logo cup" className="h-full w-full object-cover" />
+              <img src={logoUrl} alt="Chaiway logo cup" className="h-full w-full object-cover" />
             </motion.div>
             {
     /* storefront card */
@@ -91,7 +91,7 @@ function Hero() {
     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
     className="absolute -left-2 top-6 w-40 sm:w-52 rounded-2xl overflow-hidden border border-chai-orange/30 shadow-card glass-card"
   >
-              <img src={storefront.url} alt="Chaiway storefront" className="h-28 sm:h-32 w-full object-cover" />
+              <img src={storefrontUrl} alt="Chaiway storefront" className="h-28 sm:h-32 w-full object-cover" />
               <div className="p-2.5">
                 <p className="text-[10px] uppercase tracking-wider text-chai-gold">Storefront</p>
                 <p className="text-xs font-semibold text-chai-cream">Outlet — Maharashtra</p>
@@ -105,7 +105,7 @@ function Hero() {
     transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
     className="absolute -right-2 bottom-2 w-40 sm:w-52 rounded-2xl overflow-hidden border border-chai-lime/30 shadow-card glass-card"
   >
-              <img src={interior.url} alt="Chaiway café interior" className="h-28 sm:h-32 w-full object-cover" />
+              <img src={interiorUrl} alt="Chaiway café interior" className="h-28 sm:h-32 w-full object-cover" />
               <div className="p-2.5">
                 <p className="text-[10px] uppercase tracking-wider text-chai-lime">Interior</p>
                 <p className="text-xs font-semibold text-chai-cream">Café Dine Format</p>

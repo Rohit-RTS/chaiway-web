@@ -1,25 +1,25 @@
 import "./Gallery.css";
 import { motion } from "framer-motion";
-import storefront from "@/assets/storefront.asset.json";
-import interior from "@/assets/interior.asset.json";
-import kiosk from "@/assets/kiosk.asset.json";
-import menu1 from "@/assets/menu-1.asset.json";
-import menu2 from "@/assets/menu-2.asset.json";
-import menu3 from "@/assets/menu-3.asset.json";
-import menu4 from "@/assets/menu-4.asset.json";
-import businessCard from "@/assets/business-card.asset.json";
-import logoPremium from "@/assets/logo-premium.asset.json";
+import storefrontUrl from "@/assets/storefront.jpeg";
+import interiorUrl from "@/assets/interior.jpeg";
+import kioskUrl from "@/assets/kiosk.jpeg";
+import menu1Url from "@/assets/menu-1.jpeg";
+import menu2Url from "@/assets/menu-2.jpeg";
+import menu3Url from "@/assets/menu-3.jpeg";
+import menu4Url from "@/assets/menu-4.jpeg";
+import businessCardUrl from "@/assets/business-card.jpeg";
+import logoPremiumUrl from "@/assets/logo-premium.jpeg";
 import { SectionHeading } from "./SectionHeading";
 const items = [
-  { src: storefront.url, label: "Storefront", tag: "Outlets" },
-  { src: interior.url, label: "Caf\xE9 Interior", tag: "Interior" },
-  { src: kiosk.url, label: "Kiosk Format", tag: "Outlets" },
-  { src: menu2.url, label: "Tea & Coffee Menu", tag: "Menu" },
-  { src: menu1.url, label: "Pizza, Sandwich & Burger", tag: "Menu" },
-  { src: menu3.url, label: "Pasta, Momos & Bites", tag: "Menu" },
-  { src: menu4.url, label: "Bread, Water & Extras", tag: "Menu" },
-  { src: businessCard.url, label: "Founder Card", tag: "Brand" },
-  { src: logoPremium.url, label: "Chaiway Premium Outlet", tag: "Brand" }
+  { src: storefrontUrl, label: "Storefront", tag: "Outlets" },
+  { src: interiorUrl, label: "Café Interior", tag: "Interior" },
+  { src: kioskUrl, label: "Kiosk Format", tag: "Outlets" },
+  { src: menu2Url, label: "Tea & Coffee Menu", tag: "Menu" },
+  { src: menu1Url, label: "Pizza, Sandwich & Burger", tag: "Menu" },
+  { src: menu3Url, label: "Pasta, Momos & Bites", tag: "Menu" },
+  { src: menu4Url, label: "Bread, Water & Extras", tag: "Menu" },
+  { src: businessCardUrl, label: "Founder Card", tag: "Brand" },
+  { src: logoPremiumUrl, label: "Chaiway Premium Outlet", tag: "Brand" }
 ];
 function Gallery() {
   return <section className="py-20 sm:py-28">

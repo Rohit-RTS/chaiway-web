@@ -1,9 +1,9 @@
 import "./BrandStory.css";
 import { motion } from "framer-motion";
 import { Target, Heart, Eye } from "lucide-react";
-import storefront from "@/assets/storefront.asset.json";
-import interior from "@/assets/interior.asset.json";
-import kiosk from "@/assets/kiosk.asset.json";
+import storefrontUrl from "@/assets/storefront.jpeg";
+import interiorUrl from "@/assets/interior.jpeg";
+import kioskUrl from "@/assets/kiosk.jpeg";
 import { SectionHeading } from "./SectionHeading";
 function BrandStory() {
   return <section className="py-20 sm:py-28">
@@ -16,9 +16,9 @@ function BrandStory() {
     transition={{ duration: 0.7 }}
     className="relative aspect-square sm:aspect-[4/5] max-w-md mx-auto lg:mx-0 w-full"
   >
-            <img src={interior.url} alt="Chaiway café interior" className="absolute inset-0 h-full w-full object-cover rounded-3xl border border-chai-orange/30 shadow-card" />
-            <img src={storefront.url} alt="Chaiway storefront" className="absolute -bottom-6 -right-4 sm:-right-10 h-40 w-40 sm:h-56 sm:w-56 object-cover rounded-2xl border-4 border-chai-black shadow-card" />
-            <img src={kiosk.url} alt="Chaiway kiosk" className="absolute -top-6 -left-4 hidden sm:block h-32 w-32 object-cover rounded-2xl border-4 border-chai-black shadow-card" />
+            <img src={interiorUrl} alt="Chaiway café interior" className="absolute inset-0 h-full w-full object-cover rounded-3xl border border-chai-orange/30 shadow-card" />
+            <img src={storefrontUrl} alt="Chaiway storefront" className="absolute -bottom-6 -right-4 sm:-right-10 h-40 w-40 sm:h-56 sm:w-56 object-cover rounded-2xl border-4 border-chai-black shadow-card" />
+            <img src={kioskUrl} alt="Chaiway kiosk" className="absolute -top-6 -left-4 hidden sm:block h-32 w-32 object-cover rounded-2xl border-4 border-chai-black shadow-card" />
           </motion.div>
 
           <div>

@@ -1,8 +1,8 @@
 import "./SupportBento.css";
 import { motion } from "framer-motion";
 import { supportItems } from "@/data/franchise";
-import interior from "@/assets/interior.asset.json";
-import storefront from "@/assets/storefront.asset.json";
+import interiorUrl from "@/assets/interior.jpeg";
+import storefrontUrl from "@/assets/storefront.jpeg";
 import { SectionHeading } from "./SectionHeading";
 function SupportBento() {
   return <section className="py-20 sm:py-28">
@@ -19,7 +19,7 @@ function SupportBento() {
     viewport={{ once: true }}
     className="lg:col-span-2 lg:row-span-2 relative rounded-3xl overflow-hidden border border-chai-orange/30 group min-h-[280px]"
   >
-            <img src={interior.url} alt="Café setup" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" />
+            <img src={interiorUrl} alt="Café setup" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-chai-black via-chai-black/60 to-transparent" />
             <div className="absolute bottom-0 p-6">
               <p className="text-xs uppercase tracking-wider text-chai-lime font-semibold">Café Setup</p>
@@ -42,7 +42,7 @@ function SupportBento() {
     viewport={{ once: true }}
     className="lg:col-span-2 lg:row-span-1 relative rounded-3xl overflow-hidden border border-chai-lime/30 group min-h-[200px]"
   >
-            <img src={storefront.url} alt="Marketing & launch" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" />
+            <img src={storefrontUrl} alt="Marketing & launch" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" />
             <div className="absolute inset-0 bg-gradient-to-r from-chai-black via-chai-black/70 to-transparent" />
             <div className="absolute inset-0 flex items-center p-6">
               <div>

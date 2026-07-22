@@ -2,12 +2,12 @@ import "./MenuShowcase.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { menuCategories } from "@/data/menu";
-import menu1 from "@/assets/menu-1.asset.json";
-import menu2 from "@/assets/menu-2.asset.json";
-import menu3 from "@/assets/menu-3.asset.json";
-import menu4 from "@/assets/menu-4.asset.json";
+import menu1Url from "@/assets/menu-1.jpeg";
+import menu2Url from "@/assets/menu-2.jpeg";
+import menu3Url from "@/assets/menu-3.jpeg";
+import menu4Url from "@/assets/menu-4.jpeg";
 import { SectionHeading } from "./SectionHeading";
-const previewImages = [menu2, menu1, menu3, menu4];
+const previewImages = [menu2Url, menu1Url, menu3Url, menu4Url];
 function MenuShowcase({ full = false }) {
   const [active, setActive] = useState(menuCategories[0].id);
   const cats = full ? menuCategories : menuCategories.slice(0, 8);
@@ -17,7 +17,7 @@ function MenuShowcase({ full = false }) {
         <SectionHeading center eyebrow="Budget-Friendly Menu" title={<>A Menu Built for <span className="text-gradient-orange">Everyday India</span></>} subtitle="Chai, snacks, pizza, burger, sandwich, Maggi, momos and more — priced for daily customers." />
 
         {!full && <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {previewImages.map((img, i) => <motion.div
+            {previewImages.map((imgUrl, i) => <motion.div
     key={i}
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ function MenuShowcase({ full = false }) {
     transition={{ delay: i * 0.08 }}
     className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-chai-orange/20 group"
   >
-                <img src={img.url} alt={`Chaiway menu ${i + 1}`} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" />
+                <img src={imgUrl} alt={`Chaiway menu ${i + 1}`} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" />
               </motion.div>)}
           </div>}
 

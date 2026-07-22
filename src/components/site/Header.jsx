@@ -2,7 +2,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/logo.asset.json";
+import logoUrl from "@/assets/logo.jpeg";
 import { CONTACT, buildWhatsAppLink } from "@/lib/contact";
 const navLinks = [
   { to: "/", label: "Home" },
@@ -27,7 +27,7 @@ function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-2.5 group">
           <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full ring-2 ring-chai-orange/40 group-hover:ring-chai-orange transition">
-            <img src={logo.url} alt="Chaiway logo" className="h-full w-full object-cover" />
+            <img src={logoUrl} alt="Chaiway logo" className="h-full w-full object-cover" />
           </div>
           <div className="hidden sm:flex flex-col leading-tight">
             <span className="font-display font-bold text-chai-cream text-lg">Chaiway</span>
