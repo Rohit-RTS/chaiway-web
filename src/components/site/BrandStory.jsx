@@ -1,9 +1,9 @@
 import "./BrandStory.css";
 import { motion } from "framer-motion";
 import { Target, Heart, Eye } from "lucide-react";
-import storefrontUrl from "@/assets/storefront.jpeg";
-import interiorUrl from "@/assets/interior.jpeg";
-import kioskUrl from "@/assets/kiosk.jpeg";
+const storefrontUrl = "/assets/storefront.jpeg";
+const interiorUrl = "/assets/interior.jpeg";
+const kioskUrl = "/assets/kiosk.jpeg";
 import { SectionHeading } from "./SectionHeading";
 function BrandStory() {
   return <section className="py-20 sm:py-28">

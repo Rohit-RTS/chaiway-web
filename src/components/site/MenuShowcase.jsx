@@ -2,10 +2,10 @@ import "./MenuShowcase.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { menuCategories } from "@/data/menu";
-import menu1Url from "@/assets/menu-1.jpeg";
-import menu2Url from "@/assets/menu-2.jpeg";
-import menu3Url from "@/assets/menu-3.jpeg";
-import menu4Url from "@/assets/menu-4.jpeg";
+const menu1Url = "/assets/menu-1.jpeg";
+const menu2Url = "/assets/menu-2.jpeg";
+const menu3Url = "/assets/menu-3.jpeg";
+const menu4Url = "/assets/menu-4.jpeg";
 import { SectionHeading } from "./SectionHeading";
 const previewImages = [menu2Url, menu1Url, menu3Url, menu4Url];
 function MenuShowcase({ full = false }) {

@@ -1,7 +1,7 @@
 import "./Footer.css";
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Instagram, Facebook, Twitter } from "lucide-react";
-import logoUrl from "@/assets/logo.jpeg";
+const logoUrl = "/assets/logo.jpeg";
 import { CONTACT } from "@/lib/contact";
 function Footer() {
   return <footer className="relative mt-20 border-t border-chai-orange/20 bg-chai-charcoal">

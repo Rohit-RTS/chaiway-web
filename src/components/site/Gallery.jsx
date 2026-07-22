@@ -1,14 +1,14 @@
 import "./Gallery.css";
 import { motion } from "framer-motion";
-import storefrontUrl from "@/assets/storefront.jpeg";
-import interiorUrl from "@/assets/interior.jpeg";
-import kioskUrl from "@/assets/kiosk.jpeg";
-import menu1Url from "@/assets/menu-1.jpeg";
-import menu2Url from "@/assets/menu-2.jpeg";
-import menu3Url from "@/assets/menu-3.jpeg";
-import menu4Url from "@/assets/menu-4.jpeg";
-import businessCardUrl from "@/assets/business-card.jpeg";
-import logoPremiumUrl from "@/assets/logo-premium.jpeg";
+const storefrontUrl = "/assets/storefront.jpeg";
+const interiorUrl = "/assets/interior.jpeg";
+const kioskUrl = "/assets/kiosk.jpeg";
+const menu1Url = "/assets/menu-1.jpeg";
+const menu2Url = "/assets/menu-2.jpeg";
+const menu3Url = "/assets/menu-3.jpeg";
+const menu4Url = "/assets/menu-4.jpeg";
+const businessCardUrl = "/assets/business-card.jpeg";
+const logoPremiumUrl = "/assets/logo-premium.jpeg";
 import { SectionHeading } from "./SectionHeading";
 const items = [
   { src: storefrontUrl, label: "Storefront", tag: "Outlets" },

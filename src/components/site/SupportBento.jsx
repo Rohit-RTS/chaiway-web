@@ -1,8 +1,8 @@
 import "./SupportBento.css";
 import { motion } from "framer-motion";
 import { supportItems } from "@/data/franchise";
-import interiorUrl from "@/assets/interior.jpeg";
-import storefrontUrl from "@/assets/storefront.jpeg";
+const interiorUrl = "/assets/interior.jpeg";
+const storefrontUrl = "/assets/storefront.jpeg";
 import { SectionHeading } from "./SectionHeading";
 function SupportBento() {
   return <section className="py-20 sm:py-28">

@@ -1,7 +1,7 @@
 import "./MediaTrust.css";
 import { motion } from "framer-motion";
 import { Award, FileCheck, Newspaper, Building } from "lucide-react";
-import businessCardUrl from "@/assets/business-card.jpeg";
+const businessCardUrl = "/assets/business-card.jpeg";
 import { SectionHeading } from "./SectionHeading";
 import { CONTACT } from "@/lib/contact";
 function MediaTrust() {

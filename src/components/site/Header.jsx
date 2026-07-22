@@ -2,7 +2,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logoUrl from "@/assets/logo.jpeg";
+const logoUrl = "/assets/logo.jpeg";
 import { CONTACT, buildWhatsAppLink } from "@/lib/contact";
 const navLinks = [
   { to: "/", label: "Home" },

@@ -2,9 +2,9 @@ import "./Hero.css";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
-import logoUrl from "@/assets/logo.jpeg";
-import storefrontUrl from "@/assets/storefront.jpeg";
-import interiorUrl from "@/assets/interior.jpeg";
+const logoUrl = "/assets/logo.jpeg";
+const storefrontUrl = "/assets/storefront.jpeg";
+const interiorUrl = "/assets/interior.jpeg";
 import { buildWhatsAppLink } from "@/lib/contact";
 const chips = ["No Royalty", "POS Software", "Chef-Less Model", "Own Recipes", "Training Support", "Zomato + Swiggy", "Low Investment"];
 function Hero() {
