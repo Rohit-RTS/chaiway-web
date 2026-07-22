@@ -1,0 +1,42 @@
+/* USPGrid — value proposition cards */
+:root { --usp-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+
+[class*="rounded-2xl"][class*="border"],
+[class*="rounded-3xl"][class*="border"] {
+  position: relative;
+  transition: transform 0.35s var(--usp-ease), border-color 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* Diagonal gradient sheen on hover */
+[class*="rounded-2xl"][class*="border"]::before,
+[class*="rounded-3xl"][class*="border"]::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, transparent 40%, rgba(244,123,0,0.14), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+[class*="rounded-2xl"][class*="border"]:hover::before,
+[class*="rounded-3xl"][class*="border"]:hover::before {
+  opacity: 1;
+}
+
+[class*="rounded-2xl"][class*="border"]:hover,
+[class*="rounded-3xl"][class*="border"]:hover {
+  transform: translateY(-6px);
+  border-color: rgba(244, 123, 0, 0.5);
+  box-shadow: 0 24px 48px -22px rgba(0, 0, 0, 0.65);
+}
+
+/* Icon pop */
+svg.lucide {
+  transition: transform 0.3s var(--usp-ease);
+}
+[class*="rounded-2xl"]:hover svg.lucide,
+[class*="rounded-3xl"]:hover svg.lucide {
+  transform: scale(1.12);
+}

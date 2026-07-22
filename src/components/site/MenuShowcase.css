@@ -1,0 +1,36 @@
+/* MenuShowcase — category tabs & item cards */
+:root { --menu-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* Category tab buttons */
+button[class*="rounded-full"] {
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s var(--menu-ease), box-shadow 0.25s ease;
+  cursor: pointer;
+}
+button[class*="rounded-full"]:hover {
+  transform: translateY(-2px);
+}
+button[class*="rounded-full"]:active {
+  transform: translateY(0);
+}
+button[class*="rounded-full"]:focus-visible {
+  outline: 2px solid var(--chai-gold);
+  outline-offset: 3px;
+}
+
+/* Menu item cards */
+[class*="rounded-2xl"][class*="border"][class*="p-4"],
+[class*="rounded-2xl"][class*="border"][class*="p-5"] {
+  transition: transform 0.3s var(--menu-ease), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+[class*="rounded-2xl"][class*="border"][class*="p-4"]:hover,
+[class*="rounded-2xl"][class*="border"][class*="p-5"]:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 123, 0, 0.45);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.55);
+}
+
+/* Price tags */
+[class*="text-chai-gold"][class*="font-bold"],
+[class*="text-chai-orange"][class*="font-bold"] {
+  font-variant-numeric: tabular-nums;
+}

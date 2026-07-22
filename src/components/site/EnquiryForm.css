@@ -1,0 +1,92 @@
+/* EnquiryForm — input focus and validation polish */
+:root {
+  --form-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --form-focus: 0 0 0 3px rgba(244, 123, 0, 0.25);
+}
+
+form input,
+form select,
+form textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+form input:hover,
+form select:hover,
+form textarea:hover {
+  border-color: rgba(255, 177, 59, 0.5) !important;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus,
+form input:focus-visible,
+form select:focus-visible,
+form textarea:focus-visible {
+  outline: none;
+  border-color: var(--chai-orange) !important;
+  box-shadow: var(--form-focus);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Invalid state */
+form input[aria-invalid="true"],
+form select[aria-invalid="true"],
+form textarea[aria-invalid="true"] {
+  border-color: var(--destructive) !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+/* Placeholder */
+form input::placeholder,
+form textarea::placeholder {
+  color: rgba(168, 162, 158, 0.6);
+}
+
+/* Labels */
+form label {
+  transition: color 0.2s ease;
+}
+
+/* Submit button */
+form button[type="submit"] {
+  transition: transform 0.2s var(--form-ease), box-shadow 0.2s var(--form-ease), opacity 0.2s ease;
+  will-change: transform;
+}
+form button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+form button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+form button[type="submit"]:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+form button[type="submit"]:focus-visible {
+  outline: 2px solid var(--chai-gold);
+  outline-offset: 3px;
+}
+
+/* Error text */
+form p.text-destructive,
+form .text-red-400,
+form .text-red-500 {
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+  animation: shake 0.25s ease;
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+/* Success state card */
+form + div, form ~ .rounded-2xl {
+  animation: fade-slide 0.4s var(--form-ease);
+}
+@keyframes fade-slide {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,41 @@
+/* WhatsAppFloat — floating button + mobile CTA bar */
+:root { --wa-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* Pulsating ring behind button */
+@keyframes wa-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70%  { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+a[href*="wa.me"][class*="fixed"],
+a[href*="whatsapp"][class*="fixed"] {
+  animation: wa-pulse 2.4s infinite;
+  transition: transform 0.25s var(--wa-ease), box-shadow 0.25s ease;
+}
+a[href*="wa.me"][class*="fixed"]:hover,
+a[href*="whatsapp"][class*="fixed"]:hover {
+  transform: scale(1.08);
+}
+a[href*="wa.me"][class*="fixed"]:active,
+a[href*="whatsapp"][class*="fixed"]:active {
+  transform: scale(0.96);
+}
+a[href*="wa.me"][class*="fixed"]:focus-visible,
+a[href*="whatsapp"][class*="fixed"]:focus-visible {
+  outline: 3px solid var(--chai-gold);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a[href*="wa.me"][class*="fixed"],
+  a[href*="whatsapp"][class*="fixed"] { animation: none; }
+}
+
+/* Mobile bottom CTA bar */
+[class*="fixed"][class*="bottom-0"][class*="inset-x-0"] a {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+[class*="fixed"][class*="bottom-0"][class*="inset-x-0"] a:active {
+  transform: scale(0.97);
+}

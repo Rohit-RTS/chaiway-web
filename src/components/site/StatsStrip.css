@@ -1,0 +1,15 @@
+/* StatsStrip — count-up stats */
+:root { --stat-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+
+[class*="grid"] > [class*="rounded"] {
+  transition: transform 0.3s var(--stat-ease), background-color 0.3s ease;
+}
+[class*="grid"] > [class*="rounded"]:hover {
+  transform: translateY(-4px);
+}
+
+/* Numeric emphasis */
+[class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}

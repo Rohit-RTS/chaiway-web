@@ -1,0 +1,38 @@
+/* FranchiseModels — pricing/model cards */
+:root {
+  --model-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Card container detection: articles / rounded-3xl bordered cards */
+[class*="rounded-3xl"][class*="border"][class*="p-6"],
+[class*="rounded-3xl"][class*="border"][class*="p-7"],
+[class*="rounded-3xl"][class*="border"][class*="p-8"] {
+  transition: transform 0.35s var(--model-ease), border-color 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
+[class*="rounded-3xl"][class*="border"][class*="p-6"]:hover,
+[class*="rounded-3xl"][class*="border"][class*="p-7"]:hover,
+[class*="rounded-3xl"][class*="border"][class*="p-8"]:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
+}
+
+/* Model CTA buttons */
+a.inline-flex[class*="rounded-full"] {
+  transition: transform 0.2s var(--model-ease), box-shadow 0.2s ease;
+}
+a.inline-flex[class*="rounded-full"]:hover {
+  transform: translateY(-1px);
+}
+a.inline-flex[class*="rounded-full"]:focus-visible {
+  outline: 2px solid var(--chai-gold);
+  outline-offset: 3px;
+}
+
+/* Feature list items */
+ul li {
+  transition: transform 0.2s ease;
+}
+ul li:hover {
+  transform: translateX(2px);
+}

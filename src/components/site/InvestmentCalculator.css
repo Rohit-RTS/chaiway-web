@@ -1,0 +1,63 @@
+/* InvestmentCalculator — sliders and result cards */
+:root {
+  --calc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Range inputs */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--chai-orange), var(--chai-gold));
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--chai-cream);
+  border: 3px solid var(--chai-orange);
+  box-shadow: 0 4px 12px rgba(244, 123, 0, 0.5);
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(244, 123, 0, 0.7);
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--chai-cream);
+  border: 3px solid var(--chai-orange);
+  cursor: grab;
+}
+input[type="range"]:focus-visible {
+  outline: 2px solid var(--chai-gold);
+  outline-offset: 6px;
+  border-radius: 999px;
+}
+
+/* Result panels */
+[class*="rounded-2xl"][class*="bg-chai-orange"],
+[class*="rounded-2xl"][class*="bg-chai-lime"] {
+  transition: transform 0.3s var(--calc-ease), box-shadow 0.3s ease;
+}
+[class*="rounded-2xl"][class*="bg-chai-orange"]:hover,
+[class*="rounded-2xl"][class*="bg-chai-lime"]:hover {
+  transform: translateY(-3px);
+}
+
+/* Number tick animation feel */
+[class*="text-4xl"], [class*="text-5xl"] {
+  font-variant-numeric: tabular-nums;
+}

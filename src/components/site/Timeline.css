@@ -1,0 +1,24 @@
+/* Timeline — step milestones */
+:root { --tl-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* Steps */
+[class*="rounded-2xl"][class*="border"],
+[class*="rounded-3xl"][class*="border"] {
+  transition: transform 0.3s var(--tl-ease), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+[class*="rounded-2xl"][class*="border"]:hover,
+[class*="rounded-3xl"][class*="border"]:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 123, 0, 0.55);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.55);
+}
+
+/* Numbered badge */
+[class*="rounded-full"][class*="bg-chai-orange"] {
+  box-shadow: 0 8px 24px -6px rgba(244, 123, 0, 0.55);
+  transition: transform 0.3s var(--tl-ease);
+}
+[class*="rounded-2xl"]:hover [class*="rounded-full"][class*="bg-chai-orange"],
+[class*="rounded-3xl"]:hover [class*="rounded-full"][class*="bg-chai-orange"] {
+  transform: scale(1.1) rotate(-6deg);
+}

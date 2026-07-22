@@ -1,0 +1,22 @@
+/* FAQ — accordion polish */
+.rounded-2xl.border.border-chai-orange\/20.bg-chai-charcoal\/60.overflow-hidden {
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.rounded-2xl.border.border-chai-orange\/20.bg-chai-charcoal\/60.overflow-hidden:hover {
+  border-color: rgba(244, 123, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.6);
+}
+
+.rounded-2xl.border.border-chai-orange\/20 button {
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+.rounded-2xl.border.border-chai-orange\/20 button:hover {
+  color: var(--chai-gold);
+}
+.rounded-2xl.border.border-chai-orange\/20 button:focus-visible {
+  outline: 2px solid var(--chai-gold);
+  outline-offset: -2px;
+  border-radius: 1rem;
+}

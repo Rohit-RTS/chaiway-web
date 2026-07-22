@@ -1,0 +1,34 @@
+/* Footer — link and layout polish */
+footer a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+footer a:hover {
+  color: var(--chai-gold);
+}
+footer a:focus-visible {
+  outline: 2px solid var(--chai-gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Column headings */
+footer h3, footer h4, footer p.font-display {
+  position: relative;
+}
+
+/* Social icon buttons if any */
+footer a.rounded-full,
+footer a[aria-label] svg {
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1);
+}
+footer a[aria-label]:hover svg {
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* Divider glow */
+footer .border-t {
+  background-image: linear-gradient(90deg, transparent, rgba(244,123,0,0.4), transparent);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}

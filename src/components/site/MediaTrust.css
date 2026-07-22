@@ -1,0 +1,18 @@
+/* MediaTrust — press logos / trust bar */
+:root { --mt-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+
+[class*="grayscale"], [class*="opacity-60"], [class*="opacity-70"] {
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s var(--mt-ease);
+}
+[class*="grayscale"]:hover,
+[class*="opacity-60"]:hover,
+[class*="opacity-70"]:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Star rating shimmer */
+svg.lucide-star {
+  filter: drop-shadow(0 2px 6px rgba(255, 177, 59, 0.4));
+}

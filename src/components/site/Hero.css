@@ -1,0 +1,57 @@
+/* Hero — enhancement layer over Tailwind utilities */
+:root {
+  --hero-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Section base */
+section:has(> .absolute[style*="--gradient-hero"]) {
+  isolation: isolate;
+}
+
+/* Primary CTA button polish */
+.inline-flex.bg-gradient-to-r.from-chai-orange {
+  position: relative;
+  transition: transform 0.25s var(--hero-ease), box-shadow 0.25s var(--hero-ease);
+}
+.inline-flex.bg-gradient-to-r.from-chai-orange:hover {
+  transform: translateY(-2px);
+}
+.inline-flex.bg-gradient-to-r.from-chai-orange:active {
+  transform: translateY(0);
+}
+.inline-flex.bg-gradient-to-r.from-chai-orange:focus-visible {
+  outline: 2px solid var(--chai-gold);
+  outline-offset: 3px;
+}
+
+/* Secondary outline button */
+.inline-flex.border.border-chai-orange\/40 {
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.inline-flex.border.border-chai-orange\/40:hover {
+  transform: translateY(-1px);
+}
+
+/* Chip cluster spacing on small screens */
+@media (max-width: 640px) {
+  .chip { font-size: 0.72rem; padding: 0.35rem 0.7rem; }
+}
+
+/* Floating cards hover lift (desktop) */
+@media (min-width: 1024px) {
+  .absolute.rounded-2xl.overflow-hidden.glass-card {
+    transition: transform 0.4s var(--hero-ease), box-shadow 0.4s var(--hero-ease);
+  }
+  .absolute.rounded-2xl.overflow-hidden.glass-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.7);
+  }
+}
+
+/* Image sharpening */
+img { image-rendering: -webkit-optimize-contrast; }
+
+@media (prefers-reduced-motion: reduce) {
+  .inline-flex.bg-gradient-to-r.from-chai-orange,
+  .inline-flex.border.border-chai-orange\/40 { transition: none; }
+}

@@ -1,0 +1,31 @@
+/* TechDashboard — SaaS mockup */
+:root { --td-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* Mockup container floats subtly */
+@keyframes td-float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+[class*="rounded-3xl"][class*="border"][class*="bg-chai-black"],
+[class*="rounded-3xl"][class*="border"][class*="bg-chai-charcoal"] {
+  animation: td-float 8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  [class*="rounded-3xl"][class*="border"][class*="bg-chai-black"],
+  [class*="rounded-3xl"][class*="border"][class*="bg-chai-charcoal"] {
+    animation: none;
+  }
+}
+
+/* Dashboard rows/cards */
+[class*="rounded-xl"][class*="bg-chai"] {
+  transition: transform 0.25s var(--td-ease), background-color 0.25s ease;
+}
+[class*="rounded-xl"][class*="bg-chai"]:hover {
+  transform: translateX(3px);
+}
+
+/* Numbers */
+[class*="text-2xl"], [class*="text-3xl"] {
+  font-variant-numeric: tabular-nums;
+}

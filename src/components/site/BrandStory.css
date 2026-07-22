@@ -1,0 +1,32 @@
+/* BrandStory — image stack and value cards */
+:root {
+  --story-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Image stack hover choreography */
+.relative.aspect-square img,
+.relative.aspect-\[4\/5\] img {
+  transition: transform 0.6s var(--story-ease), box-shadow 0.6s var(--story-ease);
+  will-change: transform;
+}
+.relative.aspect-square:hover img.absolute.inset-0,
+.relative.aspect-\[4\/5\]:hover img.absolute.inset-0 {
+  transform: scale(1.03);
+}
+.relative.aspect-square:hover img.absolute.-bottom-6,
+.relative.aspect-\[4\/5\]:hover img.absolute.-bottom-6 {
+  transform: translateY(-6px) rotate(-1deg);
+}
+.relative.aspect-square:hover img.absolute.-top-6,
+.relative.aspect-\[4\/5\]:hover img.absolute.-top-6 {
+  transform: translateY(6px) rotate(2deg);
+}
+
+/* Story value cards */
+.rounded-2xl.p-5.border {
+  transition: transform 0.3s var(--story-ease), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.rounded-2xl.p-5.border:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.6);
+}

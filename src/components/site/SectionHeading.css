@@ -1,0 +1,18 @@
+/* SectionHeading — eyebrow + title + subtitle */
+[class*="uppercase"][class*="tracking"] {
+  position: relative;
+  display: inline-block;
+}
+
+/* Reveal-friendly typography */
+h2 {
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* Subtitle max width for readability */
+p[class*="text-chai-muted"] {
+  max-width: 42rem;
+  text-wrap: pretty;
+}

@@ -1,0 +1,77 @@
+/* Audience section — plain CSS, no Tailwind @apply */
+
+.audience-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 640px) {
+  .audience-section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+.audience-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .audience-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.audience-title-accent {
+  background: linear-gradient(135deg, #f47b00 0%, #ffb13b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.audience-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .audience-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.audience-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(244, 123, 0, 0.15);
+  background-color: rgba(20, 16, 12, 0.6);
+  padding: 1.25rem;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+.audience-card:hover {
+  border-color: rgba(244, 123, 0, 0.5);
+  transform: translateY(-4px);
+}
+
+.audience-card-icon {
+  height: 1.75rem;
+  width: 1.75rem;
+  color: var(--chai-orange);
+}
+
+.audience-card-title {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--chai-cream);
+}
+
+.audience-card-desc {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--chai-muted);
+}
