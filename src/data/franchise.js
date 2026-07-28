@@ -30,7 +30,7 @@ const franchiseModels = [
 ];
 const stats = [
   { label: "Founded In", value: "2018", suffix: "" },
-  { label: "Outlets Across India", value: "36", suffix: "+" },
+  { label: "Outlets Across India", value: "40", suffix: "+" },
   { label: "5-Year Vision", value: "200", suffix: " Outlets" },
   { label: "Investment Starts From", value: "\u20B95.5", suffix: "L*" },
   { label: "Royalty", value: "0", suffix: "%" },

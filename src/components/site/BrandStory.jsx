@@ -34,7 +34,7 @@ function BrandStory() {
               <StoryCard icon={<Eye className="h-5 w-5" />} title="Vision" body="To be a trusted and ethical organisation promoting Indian food and beverage culture." />
               <StoryCard icon={<Target className="h-5 w-5" />} title="Mission" body="To provide quality food, beverages and service at outstanding value in a comfortable, hygienic and friendly environment." />
               <StoryCard icon={<Heart className="h-5 w-5" />} title="Values" body="Hygiene, affordability, consistency, hospitality and franchisee success." />
-              <StoryCard accent title="36+ Outlets" body="Across India, with a vision of 200 outlets in the next 5 years." />
+              <StoryCard accent title="40+ Outlets" body="Across India, with a vision of 200 outlets in the next 5 years." />
             </div>
           </div>
         </div>
