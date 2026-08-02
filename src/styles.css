@@ -156,7 +156,9 @@
 
 @utility chip {
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
+  white-space: nowrap;
   gap: 0.4rem;
   padding: 0.4rem 0.85rem;
   border-radius: 999px;

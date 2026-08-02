@@ -6,7 +6,7 @@ const interiorUrl = "/assets/interior.jpeg";
 const kioskUrl = "/assets/kiosk.jpeg";
 import { SectionHeading } from "./SectionHeading";
 function BrandStory() {
-  return <section className="py-20 sm:py-28">
+  return <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <motion.div

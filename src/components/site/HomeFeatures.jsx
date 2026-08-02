@@ -47,17 +47,17 @@ const highlights = [
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 18 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { delay: i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] },
   }),
 };
 
 export function HomeFeatures() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
@@ -65,7 +65,7 @@ export function HomeFeatures() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="chip mb-4 inline-flex">
             <Coffee className="h-3.5 w-3.5 text-chai-gold" />
@@ -119,7 +119,7 @@ export function HomeFeatures() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-14 rounded-3xl border border-chai-orange/15 bg-gradient-to-r from-chai-charcoal/80 to-chai-black/60 p-6 sm:p-8"
+          className="mt-8 rounded-3xl border border-chai-orange/15 bg-gradient-to-r from-chai-charcoal/80 to-chai-black/60 p-6 sm:p-8"
         >
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             {highlights.map((h) => (

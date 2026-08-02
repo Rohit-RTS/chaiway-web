@@ -19,7 +19,13 @@ export const Route = createFileRoute("/contact")({
       { property: "og:description", content: "Get in touch with the Chaiway franchise team. 24-hour response guaranteed." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.chaiwaychai.com/contact" },
+      { property: "og:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Chaiway Café — Apply for Franchise" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
+      { name: "twitter:image:alt", content: "Chaiway Café — Apply for Franchise" },
     ],
     links: [
       { rel: "canonical", href: "https://www.chaiwaychai.com/contact" },

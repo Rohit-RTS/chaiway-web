@@ -79,7 +79,7 @@ export function Testimonials() {
   const t = testimonials[active];
 
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-16 sm:py-20 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-chai-orange/6 blur-3xl" />
@@ -92,7 +92,7 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="chip mb-4 inline-flex">
             <Star className="h-3.5 w-3.5 text-chai-gold fill-chai-gold" />

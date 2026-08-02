@@ -16,41 +16,41 @@ const chips = [
 ];
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.05,
+      staggerChildren: 0.1,
+      delayChildren: 0.04,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 22 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-24 sm:pt-36 sm:pb-32 min-h-[90vh] flex flex-col justify-center">
+    <section className="relative overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20 min-h-[90vh] flex flex-col justify-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 w-full relative z-10">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
           
-          {/* Left Side Content */}
+          {/* Content Column */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-start text-left"
+            className="flex flex-col items-center lg:items-start text-center lg:text-left mx-auto lg:mx-0"
           >
-            {/* Badge — top-left */}
+            {/* Badge */}
             <motion.div variants={itemVariants}>
-              <span className="chip shadow-[0_4px_15px_rgba(244,123,0,0.15)] inline-flex items-center gap-1.5">
+              <span className="chip shadow-[0_4px_15px_rgba(244,123,0,0.15)] inline-flex items-center gap-1.5 mx-auto lg:mx-0">
                 <Sparkles className="h-3.5 w-3.5 text-chai-gold animate-pulse" />
                 India's Affordable Tea Café Franchise
               </span>
@@ -59,7 +59,7 @@ export function Hero() {
             {/* Heading */}
             <motion.h1
               variants={itemVariants}
-              className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-chai-cream tracking-tight text-left"
+              className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-chai-cream tracking-tight text-center lg:text-left"
             >
               Start Your Own{" "}
               <span className="text-gradient-orange-shimmer inline-block">
@@ -71,7 +71,7 @@ export function Hero() {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="mt-4 text-base sm:text-lg text-chai-muted max-w-xl font-normal leading-relaxed text-left"
+              className="mt-4 text-base sm:text-lg text-chai-muted max-w-xl font-normal leading-relaxed text-center lg:text-left mx-auto lg:mx-0"
             >
               Low investment.{" "}
               <span className="text-chai-gold font-semibold">No royalty.</span>{" "}
@@ -83,7 +83,7 @@ export function Hero() {
             {/* Interactive Buttons */}
             <motion.div
               variants={itemVariants}
-              className="mt-8 flex flex-wrap items-center gap-4"
+              className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4"
             >
               <AnimatedButton
                 to="/contact"
@@ -114,7 +114,7 @@ export function Hero() {
             {/* Feature Chips */}
             <motion.div
               variants={itemVariants}
-              className="mt-9 flex flex-wrap gap-2"
+              className="mt-9 flex flex-wrap justify-center lg:justify-start gap-2"
             >
               {chips.map((c) => (
                 <span
@@ -128,7 +128,7 @@ export function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="mt-4 text-[11px] text-chai-muted/80 max-w-xl text-left"
+              className="mt-4 text-[11px] text-chai-muted/80 max-w-xl text-center mx-auto lg:mx-0 leading-relaxed"
             >
               *Investment and returns are indicative and may vary by location, outlet size, operations and final agreement.
             </motion.p>

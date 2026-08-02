@@ -12,7 +12,7 @@ function MenuShowcase({ full = false }) {
   const [active, setActive] = useState(menuCategories[0].id);
   const cats = full ? menuCategories : menuCategories.slice(0, 8);
   const activeCat = menuCategories.find((c) => c.id === active) ?? menuCategories[0];
-  return <section className="py-20 sm:py-28">
+  return <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading center eyebrow="Budget-Friendly Menu" title={<>A Menu Built for <span className="text-gradient-orange">Everyday India</span></>} subtitle="Chai, snacks, pizza, burger, sandwich, Maggi, momos and more — priced for daily customers." />
 

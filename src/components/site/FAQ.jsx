@@ -6,7 +6,7 @@ import { faqs } from "@/data/franchise";
 import { SectionHeading } from "./SectionHeading";
 function FAQ() {
   const [open, setOpen] = useState(0);
-  return <section className="py-20 sm:py-28">
+  return <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeading center eyebrow="FAQ" title={<>Questions, <span className="text-gradient-orange">Answered</span></>} />
         <div className="mt-10 space-y-3">

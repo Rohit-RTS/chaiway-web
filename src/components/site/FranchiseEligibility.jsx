@@ -51,7 +51,7 @@ const idealProfiles = [
 
 export function FranchiseEligibility() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -59,7 +59,7 @@ export function FranchiseEligibility() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="chip mb-4 inline-flex">Eligibility</span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-chai-cream">
@@ -145,7 +145,7 @@ export function FranchiseEligibility() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-chai-muted mb-6 text-base">
+          <p className="text-chai-muted text-center max-w-xl mx-auto mb-6 text-base">
             Think you're a good fit? Our team will guide you through the next steps.
           </p>
           <Link

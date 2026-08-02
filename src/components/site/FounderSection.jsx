@@ -58,16 +58,16 @@ const timelineEvents = [
 
 export function FounderSection() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Founder */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-28">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-14">
           <motion.div
-            initial={{ opacity: 0, x: -24 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className="text-center flex flex-col items-center"
           >
             <span className="chip mb-5 inline-flex">Founder's Message</span>

@@ -5,7 +5,7 @@ const businessCardUrl = "/assets/business-card.jpeg";
 import { SectionHeading } from "./SectionHeading";
 import { CONTACT } from "@/lib/contact";
 function MediaTrust() {
-  return <section className="py-20 sm:py-28">
+  return <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading center eyebrow="Media & Trust" title={<>A Registered, <span className="text-gradient-orange">Recognised Brand</span></>} subtitle="Backed by a registered company, certifications and growing media presence." />
 

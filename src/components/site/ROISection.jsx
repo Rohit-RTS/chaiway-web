@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { TrendingUp, IndianRupee, Clock, Users } from "lucide-react";
+import { TrendingUp, IndianRupee, Clock, Users, Star } from "lucide-react";
 
 const roiCards = [
   {
@@ -47,7 +47,7 @@ const roiFactors = [
 
 export function ROISection() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -55,7 +55,7 @@ export function ROISection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="chip mb-4 inline-flex">
             <TrendingUp className="h-3.5 w-3.5 text-chai-gold" />
@@ -81,14 +81,22 @@ export function ROISection() {
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className={`relative rounded-3xl border bg-gradient-to-b ${card.color} p-7 overflow-hidden text-center`}
             >
-              {card.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-chai-orange to-chai-gold px-4 py-1 text-[11px] font-bold text-[#1a0e00] uppercase tracking-wide shadow">
-                  {card.badge}
-                </div>
-              )}
+              {/* Top Row — aligned in one line and splitted */}
+              <div className="flex items-center justify-between w-full mb-3 min-h-[28px]">
+                {card.badge ? (
+                  <span style={{ display: "inline-flex", flexDirection: "row", alignItems: "center", gap: "4px", whiteSpace: "nowrap", flexWrap: "nowrap" }} className="rounded-full bg-gradient-to-r from-chai-orange to-chai-gold px-3.5 py-1 text-[11px] font-bold text-[#1a0e00] uppercase tracking-wider shadow-md">
+                    <Star style={{ display: "inline", verticalAlign: "middle", flexShrink: 0 }} className="h-3.5 w-3.5 fill-current" />
+                    <span style={{ display: "inline", whiteSpace: "nowrap" }}>{card.badge}</span>
+                  </span>
+                ) : (
+                  <span style={{ display: "inline-block", whiteSpace: "nowrap" }} className="text-[11px] uppercase tracking-wider text-chai-gold font-bold bg-chai-gold/10 border border-chai-gold/20 rounded-full px-3 py-1">
+                    ROI Format
+                  </span>
+                )}
+                <p className="text-[11px] uppercase tracking-wider text-chai-lime font-semibold text-right">{card.area}</p>
+              </div>
 
-              <h3 className="font-display text-2xl font-extrabold text-chai-cream mt-2 text-center">{card.model}</h3>
-              <p className="text-sm text-chai-muted mt-1 text-center">{card.area}</p>
+              <h3 className="font-display text-2xl font-extrabold text-chai-cream text-center">{card.model}</h3>
 
               <div className="mt-5 text-center">
                 <p className="text-xs text-chai-muted uppercase tracking-wider text-center">Investment</p>
@@ -144,7 +152,7 @@ export function ROISection() {
           </div>
         </div>
 
-        <p className="mt-6 text-center text-xs text-chai-muted/70">
+        <p className="mt-8 text-center text-xs text-chai-muted/80 max-w-3xl mx-auto leading-relaxed">
           *Figures are indicative estimates only. Revenue and ROI depend on location, rent, operations, staff, local demand and footfall. Final investment may vary by city and setup requirements.
         </p>
       </div>

@@ -56,27 +56,14 @@ function StatsStrip() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-                className={`flex items-center justify-center p-4 rounded-xl transition-colors duration-300 hover:bg-chai-orange/5 ${
-                  isInline ? "lg:justify-start" : "lg:justify-center"
-                }`}
+                className="flex items-center justify-center p-4 rounded-xl transition-colors duration-300 hover:bg-chai-orange/5 lg:justify-center"
               >
-                {isInline ? (
-                  /* Left / Top aligned Inline Layout: Stat and text on the same line */
-                  <div className="flex flex-row items-center justify-start gap-3.5 text-left w-full sm:w-auto">
-                    <CountUp value={s.value} suffix={s.suffix} />
-                    <p className="text-[11px] sm:text-xs uppercase tracking-[0.14em] text-chai-lime font-bold leading-tight max-w-[130px] text-left">
-                      {s.label}
-                    </p>
-                  </div>
-                ) : (
-                  /* Center aligned Stacked Layout: Stat top, label centered below */
-                  <div className="flex flex-col items-center justify-center text-center w-full">
-                    <CountUp value={s.value} suffix={s.suffix} />
-                    <p className="mt-2 text-[11px] sm:text-xs uppercase tracking-[0.14em] text-chai-lime font-bold leading-tight text-center">
-                      {s.label}
-                    </p>
-                  </div>
-                )}
+                <div className="flex flex-col items-center justify-center text-center w-full">
+                  <CountUp value={s.value} suffix={s.suffix} />
+                  <p className="mt-2 text-[11px] sm:text-xs uppercase tracking-[0.14em] text-chai-lime font-bold leading-tight text-center">
+                    {s.label}
+                  </p>
+                </div>
               </motion.div>
             );
           })}

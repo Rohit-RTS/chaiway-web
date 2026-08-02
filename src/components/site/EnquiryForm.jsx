@@ -44,7 +44,7 @@ function EnquiryForm({ defaultModel } = {}) {
     }
   };
   return (
-    <section id="enquiry" className="py-20 sm:py-28">
+    <section id="enquiry" className="py-14 sm:py-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <SectionHeading center eyebrow="Franchise Enquiry" title={<>Apply for a <span className="text-gradient-orange">Chaiway Franchise</span></>} subtitle="Our franchise team will connect with you for model suitability, location discussion and next steps." />
 
@@ -119,7 +119,7 @@ function EnquiryForm({ defaultModel } = {}) {
               <MessageCircle className="h-4 w-4" /> WhatsApp Us
             </a>
           </div>
-          <p className="sm:col-span-2 text-xs text-chai-muted/80 text-center mt-2">
+          <p className="sm:col-span-2 text-xs text-chai-muted/80 text-center max-w-lg mx-auto mt-3">
             By submitting, you agree to be contacted by the official Chaiway franchise team.
           </p>
         </form>

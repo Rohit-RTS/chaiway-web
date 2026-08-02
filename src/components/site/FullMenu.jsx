@@ -172,7 +172,7 @@ export function FullMenu() {
           </div>
         )}
 
-        <p className="mt-10 text-center text-xs text-chai-muted/70">
+        <p className="mt-10 text-center text-xs text-chai-muted/80 max-w-xl mx-auto leading-relaxed">
           * Prices may vary by location and outlet. Menu is subject to change without prior notice.
         </p>
       </div>

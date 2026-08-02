@@ -13,7 +13,13 @@ export const Route = createFileRoute("/menu")({
       { property: "og:description", content: "50+ menu items starting at ₹12. Kadak chai, pizza, burgers, Maggi, shakes & more." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.chaiwaychai.com/menu" },
+      { property: "og:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Chaiway Café Full Menu" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
+      { name: "twitter:image:alt", content: "Chaiway Café Full Menu" },
     ],
     links: [
       { rel: "canonical", href: "https://www.chaiwaychai.com/menu" },

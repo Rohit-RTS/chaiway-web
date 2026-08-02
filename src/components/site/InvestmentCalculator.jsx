@@ -19,7 +19,7 @@ function InvestmentCalculator() {
     return null;
   }, [area, budget]);
   const ready = model && tier && property && area && budget;
-  return <section className="py-20 sm:py-28">
+  return <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading center eyebrow="Match My Model" title={<>Find the Right <span className="text-gradient-orange">Chaiway Model</span> for You</>} subtitle="Answer 5 quick questions and we'll suggest a suitable format. Final ROI depends on rent, sales, staff, raw material and local demand — our team can guide you in detail." />
 

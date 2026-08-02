@@ -6,7 +6,7 @@ import { SectionHeading } from "./SectionHeading";
 
 function Comparison() {
   return (
-    <section className="py-20 sm:py-28 overflow-hidden">
+    <section className="py-14 sm:py-16 overflow-hidden">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <SectionHeading
           center

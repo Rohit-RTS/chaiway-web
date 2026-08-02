@@ -14,7 +14,13 @@ export const Route = createFileRoute("/gallery")({
       { property: "og:description", content: "See Chaiway outlets in action — storefronts, interiors, kiosks & brand moments." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.chaiwaychai.com/gallery" },
+      { property: "og:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Chaiway Café Outlet Gallery" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
+      { name: "twitter:image:alt", content: "Chaiway Café Outlet Gallery" },
     ],
     links: [
       { rel: "canonical", href: "https://www.chaiwaychai.com/gallery" },

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { TrendingUp, Package, ChefHat, BarChart3, Clock, ShoppingBag, AlertCircle } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 function TechDashboard() {
-  return <section className="py-20 sm:py-28 relative overflow-hidden">
+  return <section className="py-14 sm:py-16 relative overflow-hidden">
       <div className="absolute top-1/2 left-0 -translate-y-1/2 -z-10 h-96 w-96 rounded-full opacity-30" style={{ background: "var(--gradient-glow)" }} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">

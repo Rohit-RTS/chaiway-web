@@ -16,7 +16,13 @@ export const Route = createFileRoute("/about")({
       { property: "og:description", content: "Founded in 2018 with a vision of 200 outlets across India. Bringing modern chai culture to the masses." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.chaiwaychai.com/about" },
+      { property: "og:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Chaiway Café — Our Story, Vision & Mission" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
+      { name: "twitter:image:alt", content: "Chaiway Café — Our Story, Vision & Mission" },
     ],
     links: [
       { rel: "canonical", href: "https://www.chaiwaychai.com/about" },
@@ -29,6 +35,13 @@ export const Route = createFileRoute("/about")({
           "@type": "AboutPage",
           name: "About Chaiway Café",
           description: "Story, mission, vision, founder details, and growth milestones of Chaiway Café.",
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.chaiwaychai.com/" },
+              { "@type": "ListItem", position: 2, name: "About", item: "https://www.chaiwaychai.com/about" },
+            ],
+          },
         }),
       },
     ],

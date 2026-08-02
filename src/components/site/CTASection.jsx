@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/contact";
 function CTASection() {
-  return <section className="relative py-20 sm:py-28">
+  return <section className="relative py-12 sm:py-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="relative rounded-3xl overflow-hidden border border-chai-orange/30 bg-gradient-to-br from-chai-orange via-chai-gold to-chai-orange p-8 sm:p-14 text-center">
           <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 30% 30%, #000 2px, transparent 2px)", backgroundSize: "40px 40px" }} />

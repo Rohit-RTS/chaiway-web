@@ -52,25 +52,14 @@ function StatsStrip() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
-                className={`flex items-center justify-center p-4 rounded-xl hover:bg-chai-orange/5 transition-colors ${
-                  isInline ? "lg:justify-start" : "lg:justify-center"
-                }`}
+                className="flex items-center justify-center p-4 rounded-xl hover:bg-chai-orange/5 transition-colors lg:justify-center"
               >
-                {isInline ? (
-                  <div className="flex flex-row items-center justify-start gap-3.5 text-left w-full sm:w-auto">
-                    <CountUp value={s.value} suffix={s.suffix} />
-                    <p className="text-[11px] sm:text-xs uppercase tracking-[0.14em] text-chai-lime font-bold leading-tight max-w-[130px] text-left">
-                      {s.label}
-                    </p>
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center justify-center text-center w-full">
-                    <CountUp value={s.value} suffix={s.suffix} />
-                    <p className="mt-2 text-[11px] sm:text-xs uppercase tracking-[0.14em] text-chai-lime font-bold leading-tight text-center">
-                      {s.label}
-                    </p>
-                  </div>
-                )}
+                <div className="flex flex-col items-center justify-center text-center w-full">
+                  <CountUp value={s.value} suffix={s.suffix} />
+                  <p className="mt-2 text-[11px] sm:text-xs uppercase tracking-[0.14em] text-chai-lime font-bold leading-tight text-center">
+                    {s.label}
+                  </p>
+                </div>
               </motion.div>
             );
           })}

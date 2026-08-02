@@ -25,7 +25,7 @@ const items = [
 
 function Gallery() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading center eyebrow="Gallery" title={<>Inside The <span className="text-gradient-orange">Chaiway World</span></>} subtitle="A look at our outlets, interiors, menu and brand moments." />
 

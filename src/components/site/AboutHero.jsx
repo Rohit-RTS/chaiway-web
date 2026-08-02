@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router";
 
 export function AboutHero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden text-center">
+    <section className="relative min-h-[80vh] flex items-center pt-24 pb-16 sm:pt-28 sm:pb-20 overflow-hidden text-center">
       {/* Background */}
       <div className="absolute inset-0 -z-10" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(244,123,0,0.16), transparent 55%), linear-gradient(180deg,#080604 0%,#14100c 100%)" }} />
       <div className="absolute inset-0 -z-10 opacity-[0.04]" style={{ backgroundImage: "linear-gradient(to right,#fff 1px,transparent 1px),linear-gradient(to bottom,#fff 1px,transparent 1px)", backgroundSize: "60px 60px" }} />

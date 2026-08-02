@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router";
 import { locations } from "@/data/franchise";
 import { SectionHeading } from "./SectionHeading";
 function Locations() {
-  return <section className="py-20 sm:py-28">
+  return <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading center eyebrow="Locations" title={<>Growing Across <span className="text-gradient-orange">India</span></>} subtitle="From Maharashtra to Telangana and Madhya Pradesh — and expanding fast." />
 

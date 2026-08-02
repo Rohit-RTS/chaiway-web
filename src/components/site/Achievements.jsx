@@ -70,7 +70,7 @@ const mediaMentions = [
 
 export function Achievements() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -78,7 +78,7 @@ export function Achievements() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="chip mb-4 inline-flex">
             <Award className="h-3.5 w-3.5 text-chai-gold" />
@@ -94,7 +94,7 @@ export function Achievements() {
         </motion.div>
 
         {/* Achievement Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           {achievements.map((a, i) => (
             <motion.div
               key={a.label}
