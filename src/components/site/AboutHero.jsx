@@ -56,7 +56,7 @@ export function AboutHero() {
           {[
             { val: "2018", label: "Founded" },
             { val: "40+", label: "Outlets" },
-            { val: "200", label: "5-Year Vision" },
+            { val: "200+", label: "5-Year Vision" },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <p className="font-display text-3xl font-extrabold text-gradient-orange">{s.val}</p>

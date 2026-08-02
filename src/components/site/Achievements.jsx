@@ -29,7 +29,7 @@ const achievements = [
   },
   {
     icon: TrendingUp,
-    value: "200",
+    value: "200+",
     label: "5-Year Goal",
     desc: "Target outlets across India by 2028",
     color: "from-purple-500/10 to-transparent",

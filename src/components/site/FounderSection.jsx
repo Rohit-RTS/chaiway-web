@@ -53,7 +53,7 @@ const timelineEvents = [
   { year: "2022", event: "Reached 25+ outlets; entered new states" },
   { year: "2023", event: "40+ active outlets; Dine format launched", highlight: true },
   { year: "2024", event: "Brand refresh & nationwide franchise expansion strategy", highlight: true },
-  { year: "2025+", event: "Vision: 200 outlets across India", highlight: true },
+  { year: "2025+", event: "Vision: 200+ outlets across India", highlight: true },
 ];
 
 export function FounderSection() {

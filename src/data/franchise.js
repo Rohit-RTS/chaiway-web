@@ -30,7 +30,7 @@ const franchiseModels = [
 ];
 const stats = [
   { label: "OUTLETS ACROSS INDIA", value: "40", suffix: "+", layout: "inline" },
-  { label: "5-YEAR VISION", value: "200", suffix: " Outlets", layout: "center" },
+  { label: "5-YEAR OUTLET VISION", value: "200", suffix: "+", layout: "center" },
   { label: "STARTING INVESTMENT", value: "\u20B95.5", suffix: "L*", layout: "center" },
   { label: "FRANCHISE ROYALTY", value: "0", suffix: "%", layout: "inline" }
 ];

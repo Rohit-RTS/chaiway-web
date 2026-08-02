@@ -13,7 +13,7 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Learn about Chaiway Café, founded in 2018 by Aba Patil Londhe under Foodlok Foods & Beverages Pvt. Ltd. Bringing modern chai culture to everyday India with 40+ outlets." },
       { name: "keywords", content: "About Chaiway, Foodlok Foods & Beverages, Aba Patil Londhe, chai cafe story, Indian tea cafe brand, Chaiway history" },
       { property: "og:title", content: "About Chaiway Café — Story, Vision & Mission" },
-      { property: "og:description", content: "Founded in 2018 with a vision of 200 outlets across India. Bringing modern chai culture to the masses." },
+      { property: "og:description", content: "Founded in 2018 with a vision of 200+ outlets across India. Bringing modern chai culture to the masses." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.chaiwaychai.com/about" },
       { property: "og:image", content: "https://www.chaiwaychai.com/assets/logo.jpeg" },
