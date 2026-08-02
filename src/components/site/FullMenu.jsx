@@ -21,7 +21,7 @@ const categoryIcons = {
   extras: "💧",
 };
 
-const bestSellers = ["Kadak Masala Chai", "Kullad Kick Chai", "Special Tandoor Chai", "Veg Cheese Burger", "Chaiway Special Pizza (8\")", "Lassi with Ice-Cream", "Veg Paneer Cheese Maggi"];
+const bestSellers = ["Kadak Masala Chai", "Kullad Kick Chai", "Special Tandoor Chai", "Veg Cheese Burger", "Chaiway Special Pizza", "Lassi with Ice-Cream", "Veg Paneer Cheese Maggi"];
 
 export function FullMenu() {
   const [activeCategory, setActiveCategory] = useState("tea");
@@ -49,11 +49,11 @@ export function FullMenu() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 rounded-2xl border border-chai-gold/20 bg-gradient-to-r from-chai-orange/8 to-chai-gold/5 p-5"
+          className="mb-12 rounded-2xl border border-chai-gold/20 bg-gradient-to-r from-chai-orange/8 to-chai-gold/5 p-5 text-center"
         >
-          <div className="flex items-center gap-2 mb-3">
+          <div className="flex items-center justify-center gap-2 mb-3">
             <Flame className="h-4 w-4 text-chai-orange" />
-            <span className="text-sm font-bold text-chai-gold uppercase tracking-wider">Best Sellers</span>
+            <span className="text-sm font-bold text-chai-gold uppercase tracking-wider text-center">Best Sellers</span>
           </div>
           <div className="flex flex-wrap gap-2">
             {bestSellers.map((item) => (
@@ -70,7 +70,7 @@ export function FullMenu() {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative mb-8 max-w-md"
+          className="relative mb-8 max-w-md mx-auto"
         >
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-chai-muted" />
           <input
@@ -144,12 +144,12 @@ export function FullMenu() {
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 >
                   {/* Category Header */}
-                  <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center justify-center gap-3 mb-6 text-center">
                     <span className="text-4xl">{categoryIcons[current?.id] || "🍽️"}</span>
-                    <div>
-                      <h2 className="font-display text-2xl font-extrabold text-chai-cream">{current?.name}</h2>
+                    <div className="text-center">
+                      <h2 className="font-display text-2xl font-extrabold text-chai-cream text-center">{current?.name}</h2>
                       {current?.tagline && (
-                        <p className="text-sm text-chai-gold">{current.tagline}</p>
+                        <p className="text-sm text-chai-gold text-center">{current.tagline}</p>
                       )}
                     </div>
                   </div>

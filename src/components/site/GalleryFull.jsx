@@ -3,88 +3,49 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, X } from "lucide-react";
 
-const galleryTabs = ["All", "Storefronts", "Interiors", "Food", "Kiosks"];
-
 const galleryItems = [
   { src: "/assets/storefront.jpeg", alt: "Chaiway storefront", category: "Storefronts", label: "Main Outlet" },
   { src: "/assets/interior.jpeg", alt: "Café interior", category: "Interiors", label: "Café Interior" },
   { src: "/assets/kiosk.jpeg", alt: "Chaiway kiosk", category: "Kiosks", label: "Kiosk Format" },
-  { src: "/assets/menu-1.jpeg", alt: "Chaiway menu 1", category: "Food", label: "Menu Board" },
-  { src: "/assets/menu-2.jpeg", alt: "Chaiway menu 2", category: "Food", label: "Food Items" },
-  { src: "/assets/menu-3.jpeg", alt: "Chaiway menu 3", category: "Food", label: "Beverages" },
-  { src: "/assets/menu-4.jpeg", alt: "Chaiway menu 4", category: "Food", label: "Specials" },
-  { src: "/assets/business-card.jpeg", alt: "Business card", category: "Storefronts", label: "Brand Identity" },
+  { src: "/assets/menu-page-1.jpeg", alt: "Menu Cover", category: "Menu", label: "Menu Cover Page" },
+  { src: "/assets/menu-page-2.jpeg", alt: "Tea & Coffee", category: "Menu", label: "Tea, Coffee & Shakes" },
+  { src: "/assets/menu-page-3.jpeg", alt: "Fast Bites", category: "Menu", label: "Fast Bites, Pizza & Burger" },
+  { src: "/assets/menu-page-4.jpeg", alt: "Pasta & Momos", category: "Menu", label: "Pasta, Momos, Fries & Maggi" },
+  { src: "/assets/menu-page-5.jpeg", alt: "Bread & Extras", category: "Menu", label: "Bread, Water & Extras" },
 ];
 
 export function GalleryFull() {
-  const [active, setActive] = useState("All");
   const [lightbox, setLightbox] = useState(null);
-
-  const filtered = active === "All" ? galleryItems : galleryItems.filter((g) => g.category === active);
 
   return (
     <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Tab filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap gap-2 mb-10"
-        >
-          {galleryTabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActive(tab)}
-              className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 ${
-                active === tab
-                  ? "bg-gradient-to-r from-chai-orange to-chai-gold text-[#1a0e00] shadow-[0_6px_20px_-4px_rgba(244,123,0,0.5)]"
-                  : "border border-chai-orange/25 text-chai-muted hover:text-chai-cream hover:bg-chai-orange/8"
-              }`}
+        {/* Equal 1:1 Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {galleryItems.map((item, i) => (
+            <motion.div
+              key={item.src}
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: i * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              onClick={() => setLightbox(item)}
+              className="relative aspect-square overflow-hidden rounded-2xl border border-chai-orange/15 cursor-pointer group"
             >
-              {tab}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Masonry-style grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={active}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
-          >
-            {filtered.map((item, i) => (
-              <motion.div
-                key={item.src}
-                initial={{ opacity: 0, scale: 0.92 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                onClick={() => setLightbox(item)}
-                className={`relative overflow-hidden rounded-2xl border border-chai-orange/15 cursor-pointer group ${
-                  i % 5 === 0 ? "row-span-2" : ""
-                }`}
-              >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover aspect-square group-hover:scale-110 transition-transform duration-500"
-                  style={{ aspectRatio: i % 5 === 0 ? "3/4" : "1/1" }}
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-chai-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <div>
-                    <span className="text-[10px] text-chai-gold uppercase tracking-wider font-semibold">{item.category}</span>
-                    <p className="text-sm font-bold text-chai-cream mt-0.5">{item.label}</p>
-                  </div>
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-chai-black/90 via-chai-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <div>
+                  <span className="text-[10px] text-chai-gold uppercase tracking-wider font-semibold">{item.category}</span>
+                  <p className="text-sm font-bold text-chai-cream mt-0.5">{item.label}</p>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
         {/* CTA */}
         <motion.div
@@ -127,7 +88,7 @@ export function GalleryFull() {
               <img
                 src={lightbox.src}
                 alt={lightbox.alt}
-                className="w-full rounded-3xl border border-chai-orange/25 shadow-[0_30px_80px_rgba(0,0,0,0.7)]"
+                className="w-full max-h-[85vh] object-contain rounded-3xl border border-chai-orange/25 shadow-[0_30px_80px_rgba(0,0,0,0.7)]"
               />
               <button
                 onClick={() => setLightbox(null)}
@@ -135,7 +96,7 @@ export function GalleryFull() {
               >
                 <X className="h-5 w-5" />
               </button>
-              <div className="absolute bottom-4 left-4">
+              <div className="absolute bottom-4 left-4 bg-chai-black/80 backdrop-blur-md p-3 rounded-xl border border-chai-orange/20">
                 <p className="text-xs text-chai-gold uppercase tracking-wider">{lightbox.category}</p>
                 <p className="text-sm font-bold text-chai-cream">{lightbox.label}</p>
               </div>

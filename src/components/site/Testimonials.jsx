@@ -121,27 +121,27 @@ export function Testimonials() {
               {/* Quote icon */}
               <Quote className="absolute top-6 right-8 h-12 w-12 text-chai-orange/10" />
 
-              <div className="flex flex-col sm:flex-row items-start gap-6">
+              <div className="flex flex-col items-center gap-6 text-center">
                 {/* Avatar */}
-                <div className={`shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${t.color} flex items-center justify-center shadow-lg`}>
+                <div className={`shrink-0 w-16 h-16 rounded-full ring-2 ring-chai-orange/40 bg-gradient-to-br ${t.color} flex items-center justify-center shadow-[0_0_20px_rgba(244,123,0,0.3)]`}>
                   <span className="font-display font-extrabold text-[#1a0e00] text-xl">{t.initials}</span>
                 </div>
 
-                <div className="flex-1">
-                  <StarRating count={t.rating} />
-                  <p className="mt-4 text-base sm:text-lg text-chai-cream leading-relaxed font-medium">
+                <div className="flex-1 text-center">
+                  <div className="flex justify-center"><StarRating count={t.rating} /></div>
+                  <p className="mt-4 text-base sm:text-lg text-chai-cream leading-relaxed font-medium text-center">
                     "{t.quote}"
                   </p>
 
-                  <div className="mt-6 flex flex-wrap items-center gap-3">
-                    <div>
-                      <p className="font-bold text-chai-cream text-sm">{t.name}</p>
-                      <p className="text-xs text-chai-muted">{t.city}</p>
+                  <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+                    <div className="text-center">
+                      <p className="font-bold text-chai-cream text-sm text-center">{t.name}</p>
+                      <p className="text-xs text-chai-muted text-center">{t.city}</p>
                     </div>
                     <div className="h-8 w-px bg-chai-orange/20" />
-                    <div>
-                      <p className="text-xs text-chai-gold font-semibold uppercase tracking-wide">{t.model}</p>
-                      <p className="text-xs text-chai-muted">Since {t.since}</p>
+                    <div className="text-center">
+                      <p className="text-xs text-chai-gold font-semibold uppercase tracking-wide text-center">{t.model}</p>
+                      <p className="text-xs text-chai-muted text-center">Since {t.since}</p>
                     </div>
                   </div>
                 </div>

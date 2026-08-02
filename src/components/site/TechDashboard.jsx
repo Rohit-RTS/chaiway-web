@@ -7,15 +7,15 @@ function TechDashboard() {
       <div className="absolute top-1/2 left-0 -translate-y-1/2 -z-10 h-96 w-96 rounded-full opacity-30" style={{ background: "var(--gradient-glow)" }} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
+          <div className="text-center">
             <SectionHeading
     eyebrow="Tech-Enabled Café"
     title={<>Run Your Café With <span className="text-gradient-orange">Systems</span>, Not Guesswork</>}
     subtitle="Chaiway's franchise model focuses on systematic operations through POS software, inventory control, recipe management, quality checks and daily reporting — so owners run the outlet with clarity, not chaos."
   />
 
-            <div className="mt-8 grid grid-cols-2 gap-3 max-w-md">
-              {["POS Billing", "Inventory Control", "Recipe SOPs", "Daily Reports", "Order Channels", "Staff Tasks"].map((t) => <div key={t} className="rounded-xl border border-chai-orange/20 bg-chai-charcoal/70 px-3 py-2.5 text-sm font-medium text-chai-cream">
+            <div className="mt-8 grid grid-cols-2 gap-3 max-w-md mx-auto">
+              {["POS Billing", "Inventory Control", "Recipe SOPs", "Daily Reports", "Order Channels", "Staff Tasks"].map((t) => <div key={t} className="rounded-xl border border-chai-orange/20 bg-chai-charcoal/70 px-3 py-2.5 text-sm font-medium text-chai-cream text-center">
                   <span className="text-chai-lime mr-1.5">✓</span>{t}
                 </div>)}
             </div>
@@ -80,10 +80,10 @@ function TechDashboard() {
 }
 function DashCard({ icon, label, value, delta, accent }) {
   const color = accent === "orange" ? "text-chai-orange" : accent === "lime" ? "text-chai-lime" : "text-chai-gold";
-  return <div className="rounded-xl bg-chai-black/60 border border-chai-orange/15 p-4">
-      <div className={`flex items-center gap-1.5 text-[11px] uppercase tracking-wider ${color}`}>{icon}{label}</div>
-      <p className="mt-1.5 font-display font-bold text-lg text-chai-cream">{value}</p>
-      <p className={`text-[10px] ${color}`}>{delta}</p>
+  return <div className="rounded-xl bg-chai-black/60 border border-chai-orange/15 p-4 text-center">
+      <div className={`flex items-center justify-center gap-1.5 text-[11px] uppercase tracking-wider ${color}`}>{icon}{label}</div>
+      <p className="mt-1.5 font-display font-bold text-lg text-chai-cream text-center">{value}</p>
+      <p className={`text-[10px] ${color} text-center`}>{delta}</p>
     </div>;
 }
 export {

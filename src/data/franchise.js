@@ -29,12 +29,10 @@ const franchiseModels = [
   }
 ];
 const stats = [
-  { label: "Founded In", value: "2018", suffix: "" },
-  { label: "Outlets Across India", value: "40", suffix: "+" },
-  { label: "5-Year Vision", value: "200", suffix: " Outlets" },
-  { label: "Investment Starts From", value: "\u20B95.5", suffix: "L*" },
-  { label: "Royalty", value: "0", suffix: "%" },
-  { label: "Customer Age Group", value: "12-50", suffix: " yrs" }
+  { label: "OUTLETS ACROSS INDIA", value: "40", suffix: "+", layout: "inline" },
+  { label: "5-YEAR VISION", value: "200", suffix: " Outlets", layout: "center" },
+  { label: "STARTING INVESTMENT", value: "\u20B95.5", suffix: "L*", layout: "center" },
+  { label: "FRANCHISE ROYALTY", value: "0", suffix: "%", layout: "inline" }
 ];
 const usps = [
   { title: "Most Affordable Investment", desc: "Tea-caf\xE9 format priced for first-time founders." },

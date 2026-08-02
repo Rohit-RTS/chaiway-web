@@ -43,7 +43,8 @@ function EnquiryForm({ defaultModel } = {}) {
       setSubmitting(false);
     }
   };
-  return <section id="enquiry" className="py-20 sm:py-28">
+  return (
+    <section id="enquiry" className="py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <SectionHeading center eyebrow="Franchise Enquiry" title={<>Apply for a <span className="text-gradient-orange">Chaiway Franchise</span></>} subtitle="Our franchise team will connect with you for model suitability, location discussion and next steps." />
 
@@ -100,38 +101,46 @@ function EnquiryForm({ defaultModel } = {}) {
             <textarea {...register("message")} rows={3} className="input resize-none" placeholder="Tell us anything specific about your location or plans." />
           </Field>
 
-          <div className="sm:col-span-2 flex flex-col sm:flex-row gap-3 mt-2">
-            <button type="submit" disabled={submitting} className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-chai-orange to-chai-gold px-6 py-3.5 text-sm font-bold text-[#1a0e00] hover:shadow-[0_12px_30px_-8px_rgba(244,123,0,0.7)] transition disabled:opacity-60">
+          <div className="sm:col-span-2 flex flex-col sm:flex-row justify-center items-center gap-3 mt-4">
+            <button
+              type="submit"
+              disabled={submitting}
+              className="w-full sm:w-auto min-w-[240px] inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-chai-orange to-chai-gold px-8 py-3.5 text-sm font-bold text-[#1a0e00] hover:shadow-[0_12px_30px_-8px_rgba(244,123,0,0.7)] hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60"
+            >
               {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-              {submitting ? "Submitting\u2026" : "Apply for Chaiway Franchise"}
+              {submitting ? "Submitting…" : "Apply for Chaiway Franchise"}
             </button>
             <a
-    href={buildWhatsAppLink("Hi, I'd like to enquire about a Chaiway franchise.")}
-    target="_blank"
-    rel="noreferrer"
-    className="inline-flex items-center justify-center gap-2 rounded-full border border-chai-lime/50 px-6 py-3.5 text-sm font-bold text-chai-lime hover:bg-chai-lime/10 transition"
-  >
+              href={buildWhatsAppLink("Hi, I'd like to enquire about a Chaiway franchise.")}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto min-w-[180px] inline-flex items-center justify-center gap-2 rounded-full border border-chai-lime/50 px-6 py-3.5 text-sm font-bold text-chai-lime hover:bg-chai-lime/10 transition-all duration-300"
+            >
               <MessageCircle className="h-4 w-4" /> WhatsApp Us
             </a>
           </div>
-          <p className="sm:col-span-2 text-[11px] text-chai-muted/80 text-center">
-            By submitting, you agree to be contacted by the Chaiway franchise team.
+          <p className="sm:col-span-2 text-xs text-chai-muted/80 text-center mt-2">
+            By submitting, you agree to be contacted by the official Chaiway franchise team.
           </p>
         </form>
       </div>
 
-      <style>{`.input { width: 100%; border-radius: 12px; background: rgba(8,6,4,0.6); border: 1px solid rgba(244,123,0,0.2); padding: 0.7rem 0.9rem; font-size: 0.875rem; color: var(--chai-cream); outline: none; transition: border-color 0.2s; }
+      <style>{`.input { width: 100%; text-align: center; border-radius: 12px; background: rgba(8,6,4,0.6); border: 1px solid rgba(244,123,0,0.2); padding: 0.7rem 0.9rem; font-size: 0.875rem; color: var(--chai-cream); outline: none; transition: border-color 0.2s; }
         .input:focus { border-color: var(--chai-orange); }
-        .input::placeholder { color: rgba(168,162,158,0.5); }
+        .input::placeholder { color: rgba(168,162,158,0.5); text-align: center; }
+        select.input { text-align-last: center; }
       `}</style>
-    </section>;
+    </section>
+  );
 }
 function Field({ label, error, children, className = "" }) {
-  return <label className={`block ${className}`}>
-      <span className="text-xs font-semibold uppercase tracking-wider text-chai-gold">{label}</span>
+  return (
+    <label className={`block text-center ${className}`}>
+      <span className="text-xs font-semibold uppercase tracking-wider text-chai-gold block text-center">{label}</span>
       <div className="mt-1.5">{children}</div>
-      {error && <span className="mt-1 block text-[11px] text-red-400">{error}</span>}
-    </label>;
+      {error && <span className="mt-1 block text-[11px] text-red-400 text-center">{error}</span>}
+    </label>
+  );
 }
 export {
   EnquiryForm

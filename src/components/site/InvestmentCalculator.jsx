@@ -38,18 +38,18 @@ function InvestmentCalculator() {
     initial={{ opacity: 0, scale: 0.96 }}
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
-    className="rounded-3xl border border-chai-lime/30 bg-gradient-to-br from-chai-charcoal to-chai-black p-6 sm:p-8 flex flex-col"
+    className="rounded-3xl border border-chai-lime/30 bg-gradient-to-br from-chai-charcoal to-chai-black p-6 sm:p-8 flex flex-col text-center"
   >
-            <Calculator className="h-8 w-8 text-chai-lime" />
-            <p className="mt-3 text-xs uppercase tracking-wider text-chai-lime font-semibold">Your Recommendation</p>
+            <Calculator className="h-8 w-8 text-chai-lime mx-auto" />
+            <p className="mt-3 text-xs uppercase tracking-wider text-chai-lime font-semibold text-center">Your Recommendation</p>
             {recommendation && ready ? <>
-                <h3 className="mt-2 font-display text-3xl font-extrabold text-chai-cream">{recommendation.name}</h3>
-                <p className="mt-2 text-sm text-chai-muted">{recommendation.note}</p>
+                <h3 className="mt-2 font-display text-3xl font-extrabold text-chai-cream text-center">{recommendation.name}</h3>
+                <p className="mt-2 text-sm text-chai-muted text-center">{recommendation.note}</p>
               </> : <>
-                <h3 className="mt-2 font-display text-2xl font-bold text-chai-cream/70">Fill the form to see your match</h3>
-                <p className="mt-2 text-sm text-chai-muted">We'll suggest Kiosk, Pro or Dine based on your area and budget.</p>
+                <h3 className="mt-2 font-display text-2xl font-bold text-chai-cream/70 text-center">Fill the form to see your match</h3>
+                <p className="mt-2 text-sm text-chai-muted text-center">We'll suggest Kiosk, Pro or Dine based on your area and budget.</p>
               </>}
-            <p className="mt-6 text-xs text-chai-muted/80 italic">
+            <p className="mt-6 text-xs text-chai-muted/80 italic text-center">
               Exact ROI depends on rent, sales, staff, raw material cost, local demand and operations.
               Our team can guide you with model suitability.
             </p>
@@ -62,17 +62,17 @@ function InvestmentCalculator() {
     </section>;
 }
 function Select({ label, value, onChange, options }) {
-  return <label className="block">
-      <span className="text-xs font-semibold uppercase tracking-wider text-chai-gold">{label}</span>
-      <select value={value} onChange={(e) => onChange(e.target.value)} className="mt-1.5 w-full rounded-xl bg-chai-black/60 border border-chai-orange/20 px-4 py-3 text-sm text-chai-cream outline-none focus:border-chai-orange transition">
+  return <label className="block text-center">
+      <span className="text-xs font-semibold uppercase tracking-wider text-chai-gold text-center">{label}</span>
+      <select value={value} onChange={(e) => onChange(e.target.value)} className="mt-1.5 w-full rounded-xl bg-chai-black/60 border border-chai-orange/20 px-4 py-3 text-sm text-chai-cream outline-none focus:border-chai-orange transition text-center" style={{textAlignLast: "center"}}>
         {options.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
       </select>
     </label>;
 }
 function Input({ label, value, onChange, placeholder, type = "text" }) {
-  return <label className="block">
-      <span className="text-xs font-semibold uppercase tracking-wider text-chai-gold">{label}</span>
-      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className="mt-1.5 w-full rounded-xl bg-chai-black/60 border border-chai-orange/20 px-4 py-3 text-sm text-chai-cream outline-none focus:border-chai-orange transition placeholder:text-chai-muted/60" />
+  return <label className="block text-center">
+      <span className="text-xs font-semibold uppercase tracking-wider text-chai-gold text-center">{label}</span>
+      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className="mt-1.5 w-full rounded-xl bg-chai-black/60 border border-chai-orange/20 px-4 py-3 text-sm text-chai-cream outline-none focus:border-chai-orange transition placeholder:text-chai-muted/60 text-center" />
     </label>;
 }
 export {

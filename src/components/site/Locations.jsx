@@ -25,14 +25,14 @@ function Locations() {
             </div>
           </motion.div>
 
-          <div>
-            <p className="text-xs uppercase tracking-wider text-chai-gold font-semibold">Cities & States</p>
-            <div className="mt-4 flex flex-wrap gap-2">
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-wider text-chai-gold font-semibold text-center">Cities & States</p>
+            <div className="mt-4 flex flex-wrap justify-center gap-2">
               {locations.map((c) => <span key={c} className="chip">{c}</span>)}
             </div>
-            <div className="mt-6 rounded-2xl border border-chai-lime/30 bg-chai-lime/5 p-5">
-              <p className="font-display text-lg font-bold text-chai-cream">Don't see your city?</p>
-              <p className="mt-1 text-sm text-chai-muted">Request a Chaiway outlet in your city and let's explore the opportunity together.</p>
+            <div className="mt-6 rounded-2xl border border-chai-lime/30 bg-chai-lime/5 p-5 text-center">
+              <p className="font-display text-lg font-bold text-chai-cream text-center">Don't see your city?</p>
+              <p className="mt-1 text-sm text-chai-muted text-center">Request a Chaiway outlet in your city and let's explore the opportunity together.</p>
               <Link to="/contact" className="mt-4 inline-flex items-center rounded-full bg-chai-lime px-5 py-2.5 text-sm font-bold text-[#0a1500] hover:opacity-90 transition">
                 Request Chaiway in My City
               </Link>

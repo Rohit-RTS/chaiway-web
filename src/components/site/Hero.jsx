@@ -12,7 +12,6 @@ const chips = [
   "Chef-Less Model",
   "Own Recipes",
   "Training Support",
-  "Zomato + Swiggy",
   "Low Investment",
 ];
 
@@ -47,11 +46,11 @@ export function Hero() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-center flex flex-col items-center lg:items-center"
+            className="flex flex-col items-start text-left"
           >
-            {/* Badge */}
-            <motion.div variants={itemVariants} className="inline-block">
-              <span className="chip shadow-[0_4px_15px_rgba(244,123,0,0.15)]">
+            {/* Badge — top-left */}
+            <motion.div variants={itemVariants}>
+              <span className="chip shadow-[0_4px_15px_rgba(244,123,0,0.15)] inline-flex items-center gap-1.5">
                 <Sparkles className="h-3.5 w-3.5 text-chai-gold animate-pulse" />
                 India's Affordable Tea Café Franchise
               </span>
@@ -60,7 +59,7 @@ export function Hero() {
             {/* Heading */}
             <motion.h1
               variants={itemVariants}
-              className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-chai-cream tracking-tight"
+              className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-chai-cream tracking-tight text-left"
             >
               Start Your Own{" "}
               <span className="text-gradient-orange-shimmer inline-block">
@@ -72,7 +71,7 @@ export function Hero() {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="mt-4 text-base sm:text-lg text-chai-muted max-w-xl mx-auto font-normal leading-relaxed text-center"
+              className="mt-4 text-base sm:text-lg text-chai-muted max-w-xl font-normal leading-relaxed text-left"
             >
               Low investment.{" "}
               <span className="text-chai-gold font-semibold">No royalty.</span>{" "}
@@ -84,7 +83,7 @@ export function Hero() {
             {/* Interactive Buttons */}
             <motion.div
               variants={itemVariants}
-              className="mt-8 flex flex-wrap justify-center items-center gap-4"
+              className="mt-8 flex flex-wrap items-center gap-4"
             >
               <AnimatedButton
                 to="/contact"
@@ -115,7 +114,7 @@ export function Hero() {
             {/* Feature Chips */}
             <motion.div
               variants={itemVariants}
-              className="mt-9 flex flex-wrap justify-center gap-2"
+              className="mt-9 flex flex-wrap gap-2"
             >
               {chips.map((c) => (
                 <span
@@ -129,7 +128,7 @@ export function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="mt-4 text-[11px] text-chai-muted/80 max-w-xl mx-auto text-center"
+              className="mt-4 text-[11px] text-chai-muted/80 max-w-xl text-left"
             >
               *Investment and returns are indicative and may vary by location, outlet size, operations and final agreement.
             </motion.p>

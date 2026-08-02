@@ -21,7 +21,7 @@ function BrandStory() {
             <img src={kioskUrl} alt="Chaiway kiosk" className="absolute -top-6 -left-4 hidden sm:block h-32 w-32 object-cover rounded-2xl border-4 border-chai-black shadow-card" />
           </motion.div>
 
-          <div>
+          <div className="text-center">
             <SectionHeading eyebrow="Brand Story" title={<>Chaiway Café — <span className="text-gradient-orange">Chai Bolti Hai</span></>} />
             <p className="mt-6 text-chai-muted leading-relaxed">
               Chaiway Café is a venture of <span className="text-chai-cream font-semibold">Foodlok Foods & Beverages Pvt. Ltd.</span>,
@@ -42,12 +42,12 @@ function BrandStory() {
     </section>;
 }
 function StoryCard({ icon, title, body, accent }) {
-  return <div className={`rounded-2xl p-5 border ${accent ? "border-chai-lime/30 bg-chai-lime/5" : "border-chai-orange/20 bg-chai-charcoal/60"}`}>
-      <div className={`inline-flex items-center gap-2 ${accent ? "text-chai-lime" : "text-chai-orange"}`}>
+  return <div className={`rounded-2xl p-5 border text-center ${accent ? "border-chai-lime/30 bg-chai-lime/5" : "border-chai-orange/20 bg-chai-charcoal/60"}`}>
+      <div className={`inline-flex items-center justify-center gap-2 mx-auto ${accent ? "text-chai-lime" : "text-chai-orange"}`}>
         {icon}
-        <p className="font-display font-bold uppercase text-sm tracking-wider">{title}</p>
+        <p className="font-display font-bold uppercase text-sm tracking-wider text-center">{title}</p>
       </div>
-      <p className="mt-2 text-sm text-chai-muted">{body}</p>
+      <p className="mt-2 text-sm text-chai-muted text-center">{body}</p>
     </div>;
 }
 export {

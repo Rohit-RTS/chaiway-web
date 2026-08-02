@@ -2,12 +2,12 @@ import "./MenuShowcase.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { menuCategories } from "@/data/menu";
-const menu1Url = "/assets/menu-1.jpeg";
-const menu2Url = "/assets/menu-2.jpeg";
-const menu3Url = "/assets/menu-3.jpeg";
-const menu4Url = "/assets/menu-4.jpeg";
+const menuPage2Url = "/assets/menu-page-2.jpeg";
+const menuPage3Url = "/assets/menu-page-3.jpeg";
+const menuPage4Url = "/assets/menu-page-4.jpeg";
+const menuPage5Url = "/assets/menu-page-5.jpeg";
 import { SectionHeading } from "./SectionHeading";
-const previewImages = [menu2Url, menu1Url, menu3Url, menu4Url];
+const previewImages = [menuPage2Url, menuPage3Url, menuPage4Url, menuPage5Url];
 function MenuShowcase({ full = false }) {
   const [active, setActive] = useState(menuCategories[0].id);
   const cats = full ? menuCategories : menuCategories.slice(0, 8);

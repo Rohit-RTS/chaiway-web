@@ -79,7 +79,7 @@ export function ROISection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className={`relative rounded-3xl border bg-gradient-to-b ${card.color} p-7 overflow-hidden`}
+              className={`relative rounded-3xl border bg-gradient-to-b ${card.color} p-7 overflow-hidden text-center`}
             >
               {card.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-chai-orange to-chai-gold px-4 py-1 text-[11px] font-bold text-[#1a0e00] uppercase tracking-wide shadow">
@@ -87,31 +87,31 @@ export function ROISection() {
                 </div>
               )}
 
-              <h3 className="font-display text-2xl font-extrabold text-chai-cream mt-2">{card.model}</h3>
-              <p className="text-sm text-chai-muted mt-1">{card.area}</p>
+              <h3 className="font-display text-2xl font-extrabold text-chai-cream mt-2 text-center">{card.model}</h3>
+              <p className="text-sm text-chai-muted mt-1 text-center">{card.area}</p>
 
-              <div className="mt-5">
-                <p className="text-xs text-chai-muted uppercase tracking-wider">Investment</p>
-                <p className="font-display text-3xl font-extrabold text-gradient-orange mt-0.5">{card.investment}</p>
+              <div className="mt-5 text-center">
+                <p className="text-xs text-chai-muted uppercase tracking-wider text-center">Investment</p>
+                <p className="font-display text-3xl font-extrabold text-gradient-orange mt-0.5 text-center">{card.investment}</p>
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-[11px] text-chai-muted uppercase tracking-wider">Daily Orders</p>
-                  <p className="text-lg font-bold text-chai-cream mt-0.5">{card.dailyOrders}</p>
+                <div className="text-center">
+                  <p className="text-[11px] text-chai-muted uppercase tracking-wider text-center">Daily Orders</p>
+                  <p className="text-lg font-bold text-chai-cream mt-0.5 text-center">{card.dailyOrders}</p>
                 </div>
-                <div>
-                  <p className="text-[11px] text-chai-muted uppercase tracking-wider">Avg Bill</p>
-                  <p className="text-lg font-bold text-chai-cream mt-0.5">{card.avgBill}</p>
+                <div className="text-center">
+                  <p className="text-[11px] text-chai-muted uppercase tracking-wider text-center">Avg Bill</p>
+                  <p className="text-lg font-bold text-chai-cream mt-0.5 text-center">{card.avgBill}</p>
                 </div>
               </div>
 
-              <div className="mt-4 rounded-2xl bg-chai-black/40 p-4 border border-chai-orange/10">
-                <p className="text-[11px] text-chai-muted uppercase tracking-wider">Monthly Revenue Potential</p>
-                <p className="text-xl font-extrabold text-chai-gold font-display mt-1">{card.monthlyRevPotential}</p>
+              <div className="mt-4 rounded-2xl bg-chai-black/40 p-4 border border-chai-orange/10 text-center">
+                <p className="text-[11px] text-chai-muted uppercase tracking-wider text-center">Monthly Revenue Potential</p>
+                <p className="text-xl font-extrabold text-chai-gold font-display mt-1 text-center">{card.monthlyRevPotential}</p>
               </div>
 
-              <div className="mt-4 flex items-center gap-2 text-sm text-chai-muted">
+              <div className="mt-4 flex items-center justify-center gap-2 text-sm text-chai-muted">
                 <Clock className="h-4 w-4 text-chai-lime shrink-0" />
                 Break-even: <span className="text-chai-cream font-medium">{card.breakeven}</span>
               </div>

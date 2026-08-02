@@ -17,11 +17,11 @@ function Timeline() {
     viewport={{ once: true, margin: "-50px" }}
     className={`relative pl-12 sm:pl-0 sm:grid sm:grid-cols-2 sm:gap-12 ${i % 2 ? "sm:[&>*:first-child]:order-2" : ""}`}
   >
-                <div className={`sm:text-right ${i % 2 ? "sm:text-left" : ""}`}>
-                  <div className={`inline-block rounded-2xl border border-chai-orange/30 bg-chai-charcoal/70 p-5 max-w-md ${i % 2 ? "sm:ml-0" : "sm:ml-auto"}`}>
-                    <p className="text-xs uppercase tracking-wider text-chai-lime font-semibold">Step {String(i + 1).padStart(2, "0")}</p>
-                    <h3 className="mt-1 font-display text-xl font-bold text-chai-cream">{step.title}</h3>
-                    <p className="mt-2 text-sm text-chai-muted">{step.desc}</p>
+                <div className="text-center">
+                  <div className={`inline-block rounded-2xl border border-chai-orange/30 bg-chai-charcoal/70 p-5 max-w-md mx-auto text-center`}>
+                    <p className="text-xs uppercase tracking-wider text-chai-lime font-semibold text-center">Step {String(i + 1).padStart(2, "0")}</p>
+                    <h3 className="mt-1 font-display text-xl font-bold text-chai-cream text-center">{step.title}</h3>
+                    <p className="mt-2 text-sm text-chai-muted text-center">{step.desc}</p>
                   </div>
                 </div>
                 <div className="hidden sm:block" />

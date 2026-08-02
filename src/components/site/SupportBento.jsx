@@ -63,10 +63,10 @@ function BentoCard({ title, delay }) {
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay }}
-    className="rounded-2xl border border-chai-orange/15 bg-chai-charcoal/60 p-4 flex items-center hover:border-chai-orange/50 hover:bg-chai-orange/5 transition"
+    className="rounded-2xl border border-chai-orange/15 bg-chai-charcoal/60 p-4 flex items-center justify-center hover:border-chai-orange/50 hover:bg-chai-orange/5 transition text-center"
   >
       <span className="mr-2.5 inline-block h-1.5 w-1.5 rounded-full bg-chai-orange" />
-      <p className="text-sm font-medium text-chai-cream">{title}</p>
+      <p className="text-sm font-medium text-chai-cream text-center">{title}</p>
     </motion.div>;
 }
 export {

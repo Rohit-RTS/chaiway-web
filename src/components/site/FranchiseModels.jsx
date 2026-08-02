@@ -21,14 +21,16 @@ function FranchiseModels({ compact = false }) {
               {m.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-chai-orange to-chai-gold px-4 py-1 text-[11px] font-bold text-[#1a0e00] uppercase tracking-wider">
                   <Star className="h-3 w-3 fill-current" /> Most Popular
                 </div>}
-              <p className="text-xs uppercase tracking-wider text-chai-lime font-semibold">{m.bestFor}</p>
-              <h3 className="mt-1 font-display text-2xl sm:text-3xl font-extrabold text-chai-cream">{m.name}</h3>
-              <p className="mt-3 text-sm text-chai-muted">{m.area}</p>
-              <div className="mt-5 flex items-baseline gap-1.5">
-                <span className="text-xs text-chai-muted">starts at</span>
-                <span className="font-display text-3xl sm:text-4xl font-extrabold text-gradient-orange">{m.investment}</span>
+              <div className="text-center flex flex-col items-center">
+                <p className="text-xs uppercase tracking-wider text-chai-lime font-semibold">{m.bestFor}</p>
+                <h3 className="mt-1 font-display text-2xl sm:text-3xl font-extrabold text-chai-cream">{m.name}</h3>
+                <p className="mt-2 text-sm text-chai-muted">{m.area}</p>
+                <div className="mt-4 flex items-baseline justify-center gap-1.5">
+                  <span className="text-xs text-chai-muted">starts at</span>
+                  <span className="font-display text-3xl sm:text-4xl font-extrabold text-gradient-orange">{m.investment}</span>
+                </div>
+                <p className="mt-1 text-xs text-chai-muted">{m.menu}</p>
               </div>
-              <p className="mt-1 text-xs text-chai-muted">{m.menu}</p>
 
               <ul className="mt-6 space-y-2.5">
                 {m.features.map((f) => <li key={f} className="flex items-start gap-2 text-sm text-chai-cream">

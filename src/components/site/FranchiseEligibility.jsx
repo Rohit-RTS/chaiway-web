@@ -78,9 +78,9 @@ export function FranchiseEligibility() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-3xl border border-chai-orange/20 bg-chai-charcoal/60 p-8"
+            className="rounded-3xl border border-chai-orange/20 bg-chai-charcoal/60 p-8 text-center"
           >
-            <h3 className="font-display text-xl font-bold text-chai-cream mb-6">Requirements Checklist</h3>
+            <h3 className="font-display text-xl font-bold text-chai-cream mb-6 text-center">Requirements Checklist</h3>
             <div className="space-y-3">
               {eligibilityItems.map((item) => (
                 <div
@@ -116,7 +116,7 @@ export function FranchiseEligibility() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="font-display text-xl font-bold text-chai-cream mb-6">Who This Is Perfect For</h3>
+            <h3 className="font-display text-xl font-bold text-chai-cream mb-6 text-center">Who This Is Perfect For</h3>
             <div className="grid gap-4">
               {idealProfiles.map((p, i) => (
                 <motion.div
@@ -125,12 +125,12 @@ export function FranchiseEligibility() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.07 }}
-                  className="flex gap-4 rounded-2xl border border-chai-orange/12 bg-chai-charcoal/40 p-4 hover:border-chai-orange/30 hover:bg-chai-orange/5 transition-all duration-300"
+                  className="flex flex-col items-center gap-3 rounded-2xl border border-chai-orange/12 bg-chai-charcoal/40 p-4 hover:border-chai-orange/30 hover:bg-chai-orange/5 transition-all duration-300 text-center"
                 >
                   <span className="text-2xl shrink-0">{p.emoji}</span>
-                  <div>
-                    <h4 className="font-semibold text-chai-cream text-sm">{p.title}</h4>
-                    <p className="text-xs text-chai-muted mt-0.5 leading-relaxed">{p.desc}</p>
+                  <div className="text-center">
+                    <h4 className="font-semibold text-chai-cream text-sm text-center">{p.title}</h4>
+                    <p className="text-xs text-chai-muted mt-0.5 leading-relaxed text-center">{p.desc}</p>
                   </div>
                 </motion.div>
               ))}

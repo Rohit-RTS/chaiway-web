@@ -52,6 +52,7 @@ const timelineEvents = [
   { year: "2021", event: "Expanded to 15+ outlets; Zomato & Swiggy integration" },
   { year: "2022", event: "Reached 25+ outlets; entered new states" },
   { year: "2023", event: "40+ active outlets; Dine format launched", highlight: true },
+  { year: "2024", event: "Brand refresh & nationwide franchise expansion strategy", highlight: true },
   { year: "2025+", event: "Vision: 200 outlets across India", highlight: true },
 ];
 
@@ -67,70 +68,101 @@ export function FounderSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="text-center flex flex-col items-center"
           >
             <span className="chip mb-5 inline-flex">Founder's Message</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-chai-cream leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-chai-cream leading-tight text-center">
               "Chai is more than a drink.{" "}
               <span className="text-gradient-orange">It's India's culture.</span>"
             </h2>
-            <p className="mt-5 text-chai-muted leading-relaxed">
+            <p className="mt-5 text-chai-muted leading-relaxed text-center max-w-xl">
               Chaiway was born from a simple belief — that quality chai and wholesome snacks should be accessible to every Indian, regardless of their budget. What started as one outlet in Nanded has grown into a franchise movement spreading across states.
             </p>
-            <p className="mt-4 text-chai-muted leading-relaxed">
+            <p className="mt-4 text-chai-muted leading-relaxed text-center max-w-xl">
               Our founder, <span className="text-chai-cream font-semibold">Aba Patil Londhe</span>, built Chaiway with a clear mission: to empower first-time entrepreneurs with a proven, low-risk business model that carries the weight of a recognised brand.
             </p>
-            <p className="mt-4 text-chai-muted leading-relaxed">
+            <p className="mt-4 text-chai-muted leading-relaxed text-center max-w-xl">
               With zero royalty, standardised recipes, and full support from day one, Chaiway continues to expand its footprint while holding true to its founding promise — quality, consistency, and franchisee success.
             </p>
-            <div className="mt-8 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-chai-orange to-chai-gold flex items-center justify-center font-bold font-display text-[#1a0e00] text-lg">
-                AP
-              </div>
-              <div>
-                <p className="font-bold text-chai-cream">Aba Patil Londhe</p>
-                <p className="text-sm text-chai-gold">Founder, Chaiway Café</p>
+            <div className="mt-8 flex items-center justify-center gap-4 p-4 rounded-2xl border border-chai-orange/20 bg-chai-charcoal/60 backdrop-blur-sm w-full max-w-md">
+              <img
+                src="/assets/founder.jpeg"
+                alt="Aba Patil Londhe - Founder, Chaiway Café"
+                className="w-16 h-16 rounded-full object-cover ring-2 ring-chai-orange/60 shadow-[0_0_20px_rgba(244,123,0,0.3)] shrink-0"
+              />
+              <div className="text-left">
+                <p className="font-bold text-chai-cream text-base">Aba Patil Londhe</p>
+                <p className="text-sm text-chai-gold font-semibold">Founder & Managing Director, Chaiway Café</p>
                 <p className="text-xs text-chai-muted">Foodlok Foods & Beverages Pvt. Ltd.</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Growth Timeline */}
+          {/* Growth Timeline — Animated Roadmap */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3 className="font-display text-xl font-bold text-chai-cream mb-8">Growth Timeline</h3>
+            <h3 className="font-display text-xl font-bold text-chai-cream mb-8 text-center">Growth Timeline</h3>
             <div className="relative space-y-0">
-              {/* Vertical line */}
-              <div className="absolute left-5 top-2 bottom-2 w-px bg-gradient-to-b from-chai-orange via-chai-gold/50 to-chai-orange/10" />
+              {/* Animated vertical line — draws from top to bottom */}
+              <motion.div
+                initial={{ scaleY: 0 }}
+                whileInView={{ scaleY: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.6, ease: "easeOut", delay: 0.2 }}
+                style={{ originY: 0 }}
+                className="absolute left-5 top-2 bottom-2 w-0.5 bg-gradient-to-b from-chai-orange via-chai-gold/60 to-chai-orange/10"
+              />
 
               {timelineEvents.map((ev, i) => (
-                <motion.div
-                  key={ev.year}
-                  initial={{ opacity: 0, x: 16 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className={`relative flex gap-4 pb-6 ${i === timelineEvents.length - 1 ? "pb-0" : ""}`}
-                >
-                  <div className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${
-                    ev.highlight
-                      ? "bg-gradient-to-br from-chai-orange to-chai-gold shadow-[0_0_20px_rgba(244,123,0,0.5)]"
-                      : "bg-chai-charcoal border border-chai-orange/30"
-                  }`}>
-                    <span className={`text-[9px] font-extrabold ${ev.highlight ? "text-[#1a0e00]" : "text-chai-gold"}`}>
-                      {ev.year.slice(-2)}
-                    </span>
-                  </div>
-                  <div className="pt-2">
+                <div key={ev.year} className={`relative flex gap-4 ${i === timelineEvents.length - 1 ? "pb-0" : "pb-5"}`}>
+
+                  {/* Animated dot */}
+                  <motion.div
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + i * 0.12, duration: 0.4, ease: "backOut" }}
+                    className="relative z-10 shrink-0"
+                  >
+                    {/* Pulse ring on highlighted nodes */}
+                    {ev.highlight && (
+                      <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5 + i * 0.12, duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute inset-0 rounded-full bg-chai-orange/30"
+                      />
+                    )}
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                      ev.highlight
+                        ? "bg-gradient-to-br from-chai-orange to-chai-gold shadow-[0_0_20px_rgba(244,123,0,0.6)]"
+                        : "bg-chai-charcoal border border-chai-orange/30"
+                    }`}>
+                      <span className={`text-[9px] font-extrabold ${ev.highlight ? "text-[#1a0e00]" : "text-chai-gold"}`}>
+                        {ev.year.slice(-2)}
+                      </span>
+                    </div>
+                  </motion.div>
+
+                  {/* Card slides in */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.35 + i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                    className="pt-2"
+                  >
                     <span className={`text-xs font-bold uppercase tracking-wider ${ev.highlight ? "text-chai-orange" : "text-chai-gold"}`}>
                       {ev.year}
                     </span>
                     <p className="text-sm text-chai-cream font-medium mt-0.5">{ev.event}</p>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>

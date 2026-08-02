@@ -103,14 +103,14 @@ export function Achievements() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className={`rounded-3xl border ${a.border} bg-gradient-to-b ${a.color} p-6 group cursor-default ${i >= 4 ? "lg:col-span-1" : ""}`}
+              className={`rounded-3xl border ${a.border} bg-gradient-to-b ${a.color} p-6 group cursor-default text-center ${i >= 4 ? "lg:col-span-1" : ""}`}
             >
-              <div className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-chai-charcoal/80 text-chai-orange mb-4">
+              <div className="flex justify-center items-center w-11 h-11 rounded-2xl bg-chai-charcoal/80 text-chai-orange mb-4 mx-auto">
                 <a.icon className="h-5 w-5" />
               </div>
-              <p className="font-display text-4xl font-extrabold text-gradient-orange leading-none">{a.value}</p>
-              <p className="font-bold text-chai-cream text-base mt-1">{a.label}</p>
-              <p className="text-xs text-chai-muted mt-2 leading-relaxed">{a.desc}</p>
+              <p className="font-display text-4xl font-extrabold text-gradient-orange leading-none text-center">{a.value}</p>
+              <p className="font-bold text-chai-cream text-base mt-1 text-center">{a.label}</p>
+              <p className="text-xs text-chai-muted mt-2 leading-relaxed text-center">{a.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -129,10 +129,10 @@ export function Achievements() {
             {mediaMentions.map((item, i) => (
               <div
                 key={item}
-                className="flex items-center gap-3 rounded-2xl border border-chai-gold/15 bg-chai-black/30 p-4"
+                className="flex items-center justify-center gap-3 rounded-2xl border border-chai-gold/15 bg-chai-black/30 p-4 text-center"
               >
                 <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-chai-orange to-chai-gold shrink-0 shadow-[0_0_8px_rgba(244,123,0,0.5)]" />
-                <span className="text-sm text-chai-cream">{item}</span>
+                <span className="text-sm text-chai-cream text-center">{item}</span>
               </div>
             ))}
           </div>

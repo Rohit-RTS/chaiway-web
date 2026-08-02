@@ -91,7 +91,7 @@ export function HomeFeatures() {
               whileInView="visible"
               viewport={{ once: true, margin: "-40px" }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="relative rounded-3xl border border-chai-orange/15 bg-chai-charcoal/60 p-7 overflow-hidden group cursor-default"
+              className="relative rounded-3xl border border-chai-orange/15 bg-chai-charcoal/60 p-7 overflow-hidden group cursor-default text-center flex flex-col items-center"
               style={{ boxShadow: `0 0 0 0 ${p.glow}` }}
             >
               {/* Background glow on hover */}
@@ -107,8 +107,8 @@ export function HomeFeatures() {
                 <p.icon className="h-6 w-6 text-[#1a0e00]" />
               </div>
 
-              <h3 className="font-display font-bold text-lg text-chai-cream relative z-10">{p.title}</h3>
-              <p className="mt-2 text-sm text-chai-muted leading-relaxed relative z-10">{p.desc}</p>
+              <h3 className="font-display font-bold text-lg text-chai-cream relative z-10 text-center">{p.title}</h3>
+              <p className="mt-2 text-sm text-chai-muted leading-relaxed relative z-10 text-center">{p.desc}</p>
             </motion.div>
           ))}
         </div>

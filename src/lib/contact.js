@@ -8,7 +8,9 @@ const CONTACT = {
   whatsapp: "919673836999",
   email: "info@chaiwaychai.com",
   website: "www.chaiwaychai.com",
-  address: "Opp. Bharat Petrol Pump, Malegaon Road, Nanded - 431605"
+  address: "Ashok Nagar Rd, opposite SBI Bank, beside Union Bank, Ashok Nagar, Vishnu Nagar, Nanded, Maharashtra 431605",
+  instagram: "https://www.instagram.com/chaiway.india?igsh=MTl5dmMzZjNiOTM2ZQ==",
+  facebook: "https://www.facebook.com/share/1Q87w85awJ/"
 };
 function buildWhatsAppLink(message) {
   return `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(message)}`;
