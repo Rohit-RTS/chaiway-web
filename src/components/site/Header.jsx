@@ -80,13 +80,13 @@ function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full ring-2 ring-chai-orange/40 group-hover:ring-chai-orange transition-all duration-300 shadow-[0_0_16px_rgba(244,123,0,0.3)]">
+        <Link to="/" className="flex items-center gap-2 sm:gap-2.5 group">
+          <div className="relative h-10 w-10 sm:h-11 sm:w-11 shrink-0 overflow-hidden rounded-full ring-2 ring-chai-orange/50 group-hover:ring-chai-orange transition-all duration-300 shadow-[0_0_16px_rgba(244,123,0,0.4)] animate-glow-pulse">
             <img src={logoUrl} alt="Chaiway logo" className="h-full w-full object-cover" />
           </div>
-          <div className="hidden sm:flex flex-col leading-tight">
-            <span className="font-display font-bold text-chai-cream text-[1.05rem]">Chaiway</span>
-            <span className="text-[0.62rem] text-chai-gold tracking-widest uppercase">Chai Bolti Hai</span>
+          <div className="flex flex-col leading-tight">
+            <span className="font-display font-bold text-chai-cream text-sm sm:text-[1.05rem]">Chaiway</span>
+            <span className="text-[0.55rem] sm:text-[0.62rem] text-chai-gold tracking-widest uppercase font-semibold">Chai Bolti Hai</span>
           </div>
         </Link>
 

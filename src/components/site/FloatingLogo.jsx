@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const logoUrl = "/assets/logo.jpeg";
@@ -10,10 +10,10 @@ function ParticleSystem({ isHovered }) {
     <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
       {particles.map((_, i) => {
         const size = Math.random() * 4 + 2;
-        const initialX = (Math.random() - 0.5) * 280;
-        const initialY = Math.random() * 260;
-        const duration = Math.random() * 4 + 4;
-        const delay = Math.random() * 3;
+        const initialX = (Math.random() - 0.5) * 220;
+        const initialY = Math.random() * 220;
+        const duration = Math.random() * 3.5 + 3.5;
+        const delay = Math.random() * 2.5;
 
         return (
           <motion.span
@@ -25,10 +25,10 @@ function ParticleSystem({ isHovered }) {
               x: initialX,
             }}
             animate={{
-              y: [-initialY, -initialY - 180],
-              x: [initialX, initialX + (i % 2 === 0 ? 25 : -25)],
-              opacity: [0, isHovered ? 0.95 : 0.7, 0],
-              scale: [0.6, isHovered ? 1.4 : 1, 0.2],
+              y: [-initialY, -initialY - 160],
+              x: [initialX, initialX + (i % 2 === 0 ? 20 : -20)],
+              opacity: [0, isHovered ? 0.95 : 0.75, 0],
+              scale: [0.6, isHovered ? 1.4 : 1.1, 0.2],
             }}
             transition={{
               duration: isHovered ? duration * 0.7 : duration,
@@ -53,7 +53,7 @@ function SteamAnimation({ isHovered }) {
   ];
 
   return (
-    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-48 h-28 pointer-events-none z-20 overflow-visible">
+    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-40 sm:w-48 h-28 pointer-events-none z-20 overflow-visible">
       {wisps.map((wisp, index) => (
         <motion.div
           key={index}
@@ -62,12 +62,12 @@ function SteamAnimation({ isHovered }) {
           animate={{
             y: [-10, -85],
             x: [0, index % 2 === 0 ? 18 : -18, index % 2 === 0 ? -10 : 10],
-            opacity: [0, isHovered ? 0.85 : 0.6, 0],
+            opacity: [0, isHovered ? 0.9 : 0.7, 0],
             scaleX: [1 * wisp.scale, 1.8 * wisp.scale, 2.5 * wisp.scale],
             scaleY: [1, 1.4, 1.8],
           }}
           transition={{
-            duration: isHovered ? 2.2 : 3.2,
+            duration: isHovered ? 2.2 : 2.8,
             repeat: Infinity,
             delay: wisp.delay,
             ease: "easeOut",
@@ -84,19 +84,19 @@ function EnergyRing({ isHovered }) {
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
       {/* Outer Ring */}
       <motion.div
-        className="w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full border border-chai-orange/30 border-dashed"
+        className="w-[270px] h-[270px] xs:w-[310px] xs:h-[310px] sm:w-[380px] sm:h-[380px] rounded-full border border-chai-orange/35 border-dashed"
         style={{
           boxShadow: isHovered
             ? "0 0 35px rgba(244, 123, 0, 0.4), inset 0 0 35px rgba(255, 177, 59, 0.3)"
-            : "0 0 20px rgba(244, 123, 0, 0.2)",
+            : "0 0 25px rgba(244, 123, 0, 0.25)",
         }}
         animate={{
           rotate: 360,
-          scale: isHovered ? [1.02, 1.06, 1.02] : [1, 1.03, 1],
+          scale: isHovered ? [1.02, 1.06, 1.02] : [1, 1.04, 1],
         }}
         transition={{
           rotate: {
-            duration: isHovered ? 12 : 24,
+            duration: isHovered ? 12 : 18,
             repeat: Infinity,
             ease: "linear",
           },
@@ -110,12 +110,12 @@ function EnergyRing({ isHovered }) {
 
       {/* Inner Glowing Ring */}
       <motion.div
-        className="absolute w-[280px] h-[280px] sm:w-[330px] sm:h-[330px] rounded-full border-2 border-chai-gold/25"
+        className="absolute w-[230px] h-[230px] xs:w-[270px] xs:h-[270px] sm:w-[330px] sm:h-[330px] rounded-full border-2 border-chai-gold/30"
         animate={{
           rotate: -360,
         }}
         transition={{
-          duration: isHovered ? 15 : 30,
+          duration: isHovered ? 15 : 22,
           repeat: Infinity,
           ease: "linear",
         }}
@@ -142,7 +142,7 @@ function Sparkles({ isHovered }) {
           className="absolute"
           style={{ top: sp.top, left: sp.left }}
           animate={{
-            scale: [0, isHovered ? 1.5 : 1, 0],
+            scale: [0, isHovered ? 1.5 : 1.2, 0],
             opacity: [0, 1, 0],
             rotate: [0, 90, 180],
           }}
@@ -153,7 +153,7 @@ function Sparkles({ isHovered }) {
             ease: "easeInOut",
           }}
         >
-          <svg className="w-4 h-4 text-chai-gold drop-shadow-[0_0_6px_#ffb13b]" viewBox="0 0 24 24" fill="currentColor">
+          <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-chai-gold drop-shadow-[0_0_6px_#ffb13b]" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
           </svg>
         </motion.div>
@@ -197,20 +197,22 @@ export function FloatingLogo() {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
-      className="relative mx-auto w-full max-w-md lg:max-w-none aspect-square flex items-center justify-center cursor-pointer select-none perspective-1000"
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)}
+      className="relative mx-auto w-full max-w-[320px] xs:max-w-md lg:max-w-none aspect-square flex items-center justify-center cursor-pointer select-none perspective-1000"
     >
       {/* Radial Light & Orange Ambient Glow behind logo */}
       <motion.div
         animate={{
-          scale: isHovered ? [1.15, 1.25, 1.15] : [1, 1.1, 1],
-          opacity: isHovered ? [0.65, 0.85, 0.65] : [0.4, 0.6, 0.4],
+          scale: isHovered ? [1.15, 1.25, 1.15] : [1.05, 1.18, 1.05],
+          opacity: isHovered ? [0.65, 0.85, 0.65] : [0.5, 0.7, 0.5],
         }}
         transition={{
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute inset-4 sm:inset-10 rounded-full bg-gradient-to-br from-chai-orange via-chai-gold/50 to-transparent blur-3xl"
+        className="absolute inset-2 xs:inset-4 sm:inset-10 rounded-full bg-gradient-to-br from-chai-orange via-chai-gold/50 to-transparent blur-2xl sm:blur-3xl"
       />
 
       {/* Translucent Energy Rings */}
@@ -235,23 +237,23 @@ export function FloatingLogo() {
           transformStyle: "preserve-3d",
         }}
         animate={{
-          y: isHovered ? [0, -12, 0] : [0, -16, 0],
+          y: isHovered ? [0, -12, 0] : [0, -14, 0],
           rotate: isHovered ? [-1, 1, -1] : [-2, 2, -2],
-          scale: isHovered ? 1.06 : [1, 1.03, 1],
+          scale: isHovered ? 1.06 : [1, 1.04, 1],
         }}
         transition={{
-          y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
-          rotate: { duration: 7, repeat: Infinity, ease: "easeInOut" },
-          scale: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+          y: { duration: 4.5, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 6.5, repeat: Infinity, ease: "easeInOut" },
+          scale: { duration: 5.5, repeat: Infinity, ease: "easeInOut" },
         }}
         className="relative z-10 flex items-center justify-center"
       >
         {/* Logo Outer Halo & Glass Frame */}
         <div
-          className={`relative h-64 w-64 sm:h-80 sm:w-80 rounded-full p-2.5 transition-all duration-500 glass-card ${
+          className={`relative h-56 w-56 xs:h-64 xs:w-64 sm:h-80 sm:w-80 rounded-full p-2 sm:p-2.5 transition-all duration-500 glass-card ${
             isHovered
               ? "ring-4 ring-chai-orange shadow-[0_0_60px_rgba(244,123,0,0.85),0_0_100px_rgba(255,177,59,0.5)]"
-              : "ring-2 ring-chai-orange/50 shadow-[0_0_35px_rgba(244,123,0,0.5)]"
+              : "ring-2 ring-chai-orange/60 shadow-[0_0_40px_rgba(244,123,0,0.6)]"
           }`}
         >
           {/* Internal Image Container */}
