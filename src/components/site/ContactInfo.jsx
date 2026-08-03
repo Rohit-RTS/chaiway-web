@@ -166,33 +166,51 @@ export function ContactInfo() {
             className="lg:col-span-2 rounded-3xl border border-chai-orange/30 overflow-hidden bg-chai-charcoal/50 min-h-[480px] flex flex-col shadow-2xl transition-all duration-500 group"
           >
             {/* Map Header Bar */}
-            <div className="flex items-center justify-center gap-3 px-6 py-4 border-b border-chai-orange/20 bg-chai-charcoal/90 text-center">
-              <MapPin className="h-5 w-5 text-chai-orange animate-bounce" />
-              <span className="text-sm font-semibold text-chai-cream text-center tracking-wide">
-                Chaiway Headquarters — Nanded, Maharashtra
-              </span>
+            <div className="flex items-center justify-between px-6 py-4 border-b border-chai-orange/20 bg-chai-charcoal/90">
+              <div className="flex items-center gap-3 text-left">
+                <MapPin className="h-5 w-5 text-chai-orange shrink-0 animate-bounce" />
+                <span className="text-sm font-semibold text-chai-cream tracking-wide">
+                  Chaiway Headquarters — Nanded, Maharashtra
+                </span>
+              </div>
+              <a
+                href={CONTACT.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-chai-orange/20 hover:bg-chai-orange/30 border border-chai-orange/40 text-xs font-bold text-chai-cream transition-all shrink-0"
+              >
+                <span>Open in Maps ↗</span>
+              </a>
             </div>
 
             {/* Animated Embedded Map Frame */}
             <div className="flex-1 relative min-h-[420px] w-full overflow-hidden">
               <iframe
-                title="Chaiway Café Location"
-                src="https://maps.google.com/maps?q=Ashok+Nagar+Rd,+opposite+SBI+Bank,+beside+Union+Bank,+Ashok+Nagar,+Vishnu+Nagar,+Nanded,+Maharashtra+431605&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Chaiway Tea Cafe Location Map"
+                src={CONTACT.mapsEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "420px" }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale-[30%] opacity-95 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 ease-out"
+                className="grayscale-[20%] opacity-95 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-700 ease-out"
               />
               {/* Floating Map Location Overlay */}
-              <div className="absolute bottom-5 left-5 right-5 sm:right-auto bg-chai-black/90 backdrop-blur-md border border-chai-orange/40 rounded-2xl p-4 shadow-xl pointer-events-none max-w-sm text-center sm:text-left flex flex-col items-center sm:items-start">
-                <div className="flex items-center gap-2 mb-1 justify-center sm:justify-start">
+              <div className="absolute bottom-5 left-5 right-5 sm:right-auto bg-chai-black/90 backdrop-blur-md border border-chai-orange/40 rounded-2xl p-4 shadow-xl max-w-sm text-left flex flex-col items-start">
+                <div className="flex items-center gap-2 mb-1 justify-start">
                   <span className="w-2.5 h-2.5 rounded-full bg-chai-lime animate-pulse" />
                   <p className="text-xs font-extrabold text-chai-cream">{CONTACT.brand}</p>
                 </div>
-                <p className="text-[11px] text-chai-muted leading-relaxed text-center sm:text-left">{CONTACT.address}</p>
+                <p className="text-[11px] text-chai-muted leading-relaxed text-left">{CONTACT.address}</p>
+                <a
+                  href={CONTACT.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2.5 text-xs font-bold text-chai-orange hover:text-chai-gold inline-flex items-center gap-1 transition-colors pointer-events-auto"
+                >
+                  View on Google Maps ↗
+                </a>
               </div>
             </div>
           </motion.div>

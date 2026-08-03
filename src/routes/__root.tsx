@@ -111,7 +111,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               numberOfEmployees: { "@type": "QuantitativeValue", minValue: 10, maxValue: 100 },
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Opp. Bharat Petrol Pump, Malegaon Road",
+                streetAddress: "Ashok Nagar Rd, opposite SBI Bank, beside Union Bank, Ashok Nagar, Vishnu Nagar",
                 addressLocality: "Nanded",
                 addressRegion: "Maharashtra",
                 postalCode: "431605",

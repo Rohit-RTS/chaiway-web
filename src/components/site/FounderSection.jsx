@@ -84,16 +84,18 @@ export function FounderSection() {
             <p className="mt-4 text-chai-muted leading-relaxed text-center max-w-xl">
               With zero royalty, standardised recipes, and full support from day one, Chaiway continues to expand its footprint while holding true to its founding promise — quality, consistency, and franchisee success.
             </p>
-            <div className="mt-8 flex items-center justify-center gap-4 p-4 rounded-2xl border border-chai-orange/20 bg-chai-charcoal/60 backdrop-blur-sm w-full max-w-md">
-              <img
-                src="/assets/founder.jpeg"
-                alt="Aba Patil Londhe - Founder, Chaiway Café"
-                className="w-16 h-16 rounded-full object-cover ring-2 ring-chai-orange/60 shadow-[0_0_20px_rgba(244,123,0,0.3)] shrink-0"
-              />
+            <div className="mt-8 flex items-center justify-center gap-5 p-4 sm:p-5 rounded-2xl border border-chai-orange/20 bg-chai-charcoal/60 backdrop-blur-sm w-full max-w-md">
+              <div className="relative shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-br from-chai-orange via-chai-gold to-chai-orange/40 shadow-[0_0_25px_rgba(244,123,0,0.35)]">
+                <img
+                  src="/assets/founder.jpeg"
+                  alt="Aba Patil Londhe - Founder, Chaiway Café"
+                  className="w-full h-full rounded-full object-cover object-center bg-chai-black"
+                />
+              </div>
               <div className="text-left">
-                <p className="font-bold text-chai-cream text-base">Aba Patil Londhe</p>
+                <p className="font-bold text-chai-cream text-base sm:text-lg">Aba Patil Londhe</p>
                 <p className="text-sm text-chai-gold font-semibold">Founder & Managing Director, Chaiway Café</p>
-                <p className="text-xs text-chai-muted">Foodlok Foods & Beverages Pvt. Ltd.</p>
+                <p className="text-xs text-chai-muted mt-0.5">Foodlok Foods & Beverages Pvt. Ltd.</p>
               </div>
             </div>
           </motion.div>
