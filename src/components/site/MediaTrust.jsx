@@ -16,15 +16,23 @@ function MediaTrust() {
           <TrustCard icon={<Building className="h-6 w-6" />} title="Foodlok Foods Pvt. Ltd." body="Parent company, India." accent="orange" />
         </div>
 
-        <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="mt-10 grid lg:grid-cols-[1fr_1.2fr] gap-6 rounded-3xl border border-chai-orange/30 bg-gradient-to-br from-chai-charcoal to-chai-black p-6 sm:p-8 overflow-hidden"
-  >
+        <motion.a
+          href={CONTACT.founderInstagram || "https://www.instagram.com/abapatillondhe?igsh=ZTQ2dGo4bXRqZ202"}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-10 grid lg:grid-cols-[1fr_1.2fr] gap-6 rounded-3xl border border-chai-orange/30 bg-gradient-to-br from-chai-charcoal to-chai-black p-6 sm:p-8 overflow-hidden hover:border-chai-orange/60 hover:shadow-[0_0_35px_rgba(244,123,0,0.25)] transition-all duration-300 group cursor-pointer"
+        >
           <div>
-            <p className="text-xs uppercase tracking-wider text-chai-lime font-semibold">Founder & CEO</p>
-            <h3 className="mt-2 font-display text-3xl font-extrabold text-chai-cream">{CONTACT.founder}</h3>
+            <div className="flex items-center justify-between">
+              <p className="text-xs uppercase tracking-wider text-chai-lime font-semibold">Founder & CEO</p>
+              <span className="text-xs font-semibold text-chai-orange bg-chai-orange/10 border border-chai-orange/20 rounded-full px-3 py-1 inline-flex items-center gap-1.5 group-hover:bg-chai-orange group-hover:text-black transition-colors">
+                Instagram Profile ↗
+              </span>
+            </div>
+            <h3 className="mt-2 font-display text-3xl font-extrabold text-chai-cream group-hover:text-chai-orange transition-colors">{CONTACT.founder}</h3>
             <p className="mt-1 text-chai-muted">{CONTACT.company}</p>
             <div className="mt-5 space-y-1.5 text-sm text-chai-cream">
               <p>📞 {CONTACT.phonePrimary} · {CONTACT.phoneSecondary}</p>
@@ -32,12 +40,12 @@ function MediaTrust() {
               <p>🌐 {CONTACT.website}</p>
               <p>📍 {CONTACT.address}</p>
             </div>
-            <p className="mt-5 text-[11px] text-chai-muted/70 italic">Certificates and legal documents are verified before publication.</p>
+            <p className="mt-5 text-[11px] text-chai-muted/70 italic">Certificates and legal documents are verified before publication. Click card to visit Instagram profile.</p>
           </div>
-          <div className="rounded-2xl overflow-hidden border border-chai-orange/30">
-            <img src={businessCardUrl} alt="Chaiway founder business card" className="h-full w-full object-cover" />
+          <div className="rounded-2xl overflow-hidden border border-chai-orange/30 group-hover:border-chai-orange/60 transition-colors">
+            <img src={businessCardUrl} alt="Chaiway founder business card" className="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
           </div>
-        </motion.div>
+        </motion.a>
       </div>
     </section>;
 }

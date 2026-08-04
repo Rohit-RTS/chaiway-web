@@ -59,7 +59,7 @@ export function Hero() {
             {/* Heading */}
             <motion.h1
               variants={itemVariants}
-              className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-chai-cream tracking-tight text-center lg:text-left"
+              className="mt-5 font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-chai-cream tracking-tight text-center lg:text-left"
             >
               Start Your Own{" "}
               <span className="text-gradient-orange-shimmer inline-block">
@@ -83,7 +83,7 @@ export function Hero() {
             {/* Interactive Buttons */}
             <motion.div
               variants={itemVariants}
-              className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4"
+              className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4"
             >
               <AnimatedButton
                 to="/contact"
@@ -130,7 +130,7 @@ export function Hero() {
               variants={itemVariants}
               className="mt-4 text-[11px] text-chai-muted/80 max-w-xl text-center mx-auto lg:mx-0 leading-relaxed"
             >
-              *Investment and returns are indicative and may vary by location, outlet size, operations and final agreement.
+              Investment and returns are indicative and may vary by location, outlet size, operations and final agreement.
             </motion.p>
           </motion.div>
 

@@ -45,7 +45,7 @@ export function FranchiseHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-chai-cream tracking-tight"
+          className="font-display text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-[1.05] text-chai-cream tracking-tight"
         >
           Own a{" "}
           <span className="text-gradient-orange-shimmer inline-block">Chaiway Café</span>
@@ -91,16 +91,16 @@ export function FranchiseHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
-          className="mt-8 grid grid-cols-3 gap-6 sm:gap-10 max-w-md mx-auto"
+          className="mt-8 grid grid-cols-3 gap-3 sm:gap-6 sm:gap-10 max-w-xs sm:max-w-md mx-auto"
         >
           {[
-            { val: "₹5.5L*", label: "Starting Investment" },
+            { val: "₹5.5L", label: "Starting Investment" },
             { val: "0%", label: "Royalty" },
             { val: "40+", label: "Live Outlets" },
           ].map((s) => (
             <div key={s.label} className="text-center">
-              <p className="font-display text-2xl sm:text-3xl font-extrabold text-gradient-orange">{s.val}</p>
-              <p className="text-[11px] sm:text-xs text-chai-muted mt-1">{s.label}</p>
+              <p className="font-display text-xl sm:text-2xl md:text-3xl font-extrabold text-gradient-orange">{s.val}</p>
+              <p className="text-[10px] sm:text-xs text-chai-muted mt-1">{s.label}</p>
             </div>
           ))}
         </motion.div>

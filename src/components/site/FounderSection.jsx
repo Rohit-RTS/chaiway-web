@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Heart, Lightbulb, Target, Star, Shield } from "lucide-react";
+import { Heart, Lightbulb, Target, Star, Shield, Instagram } from "lucide-react";
+import { CONTACT } from "@/lib/contact";
 
 const values = [
   {
@@ -84,20 +85,33 @@ export function FounderSection() {
             <p className="mt-4 text-chai-muted leading-relaxed text-center max-w-xl">
               With zero royalty, standardised recipes, and full support from day one, Chaiway continues to expand its footprint while holding true to its founding promise — quality, consistency, and franchisee success.
             </p>
-            <div className="mt-8 flex items-center justify-center gap-5 p-4 sm:p-5 rounded-2xl border border-chai-orange/20 bg-chai-charcoal/60 backdrop-blur-sm w-full max-w-md">
-              <div className="relative shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-br from-chai-orange via-chai-gold to-chai-orange/40 shadow-[0_0_25px_rgba(244,123,0,0.35)]">
+            <a
+              href={CONTACT.founderInstagram || "https://www.instagram.com/abapatillondhe?igsh=ZTQ2dGo4bXRqZ202"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 relative flex items-center gap-4 p-4 sm:p-5 rounded-2xl border border-chai-orange/30 bg-chai-charcoal/80 backdrop-blur-sm w-full max-w-md hover:border-chai-orange/70 hover:shadow-[0_0_30px_rgba(244,123,0,0.3)] hover:scale-[1.02] transition-all duration-300 group cursor-pointer"
+            >
+              <div className="relative shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full p-1 bg-gradient-to-br from-chai-orange via-chai-gold to-chai-orange/40 shadow-[0_0_25px_rgba(244,123,0,0.35)] group-hover:scale-105 transition-transform duration-300">
                 <img
                   src="/assets/founder.jpeg"
                   alt="Aba Patil Londhe - Founder, Chaiway Café"
                   className="w-full h-full rounded-full object-cover object-center bg-chai-black"
                 />
+                <div className="absolute -bottom-1 -right-1 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
+                  <Instagram className="w-3 h-3 sm:w-4 sm:h-4" />
+                </div>
               </div>
-              <div className="text-left">
-                <p className="font-bold text-chai-cream text-base sm:text-lg">Aba Patil Londhe</p>
-                <p className="text-sm text-chai-gold font-semibold">Founder & Managing Director, Chaiway Café</p>
-                <p className="text-xs text-chai-muted mt-0.5">Foodlok Foods & Beverages Pvt. Ltd.</p>
+              <div className="text-left min-w-0">
+                <p className="font-bold text-chai-cream text-sm sm:text-base lg:text-lg group-hover:text-chai-orange transition-colors truncate">
+                  Aba Patil Londhe
+                </p>
+                <p className="text-xs sm:text-sm text-chai-gold font-semibold leading-snug">Founder &amp; Managing Director, Chaiway Café</p>
+                <p className="text-[11px] text-chai-muted mt-0.5">Foodlok Foods &amp; Beverages Pvt. Ltd.</p>
+                <p className="text-[11px] text-chai-orange font-medium mt-1.5 inline-flex items-center gap-1 group-hover:underline">
+                  <Instagram className="w-3 h-3" /> View Instagram →
+                </p>
               </div>
-            </div>
+            </a>
           </motion.div>
 
           {/* Growth Timeline — Animated Roadmap */}

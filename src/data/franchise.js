@@ -2,8 +2,8 @@ const franchiseModels = [
   {
     id: "kiosk",
     name: "Chaiway Kiosk",
-    area: "60 \u2013 100 sq. ft.",
-    investment: "\u20B95.5 Lakh*",
+    area: "60 – 100 sq. ft.",
+    investment: "₹5.5 Lakh",
     bestFor: "Compact high-footfall locations",
     menu: "Tea & beverages focused",
     features: ["Compact setup", "Quick break-even potential", "Ideal for street corners", "POS included"]
@@ -11,8 +11,8 @@ const franchiseModels = [
   {
     id: "pro",
     name: "Chaiway Pro",
-    area: "100 \u2013 200 sq. ft.",
-    investment: "\u20B97.5 Lakh*",
+    area: "100 – 200 sq. ft.",
+    investment: "₹7.5 Lakh",
     bestFor: "Roadside, colleges, offices, markets",
     menu: "Tea, beverages and fast snacks",
     features: ["Full beverage range", "Snacks + bites menu", "Standing + take-away", "Most Popular Format"],
@@ -21,21 +21,21 @@ const franchiseModels = [
   {
     id: "dine",
     name: "Chaiway Dine",
-    area: "300 \u2013 500 sq. ft.",
-    investment: "\u20B99.5 Lakh*",
+    area: "300 – 500 sq. ft.",
+    investment: "₹9.5 Lakh",
     bestFor: "Premium streets, malls, youth hangouts",
-    menu: "Full caf\xE9 with dine-in",
-    features: ["Premium seating caf\xE9", "Complete Chaiway menu", "Group / hangout friendly", "Zomato + Swiggy ready"]
+    menu: "Full café with dine-in",
+    features: ["Premium seating café", "Complete Chaiway menu", "Group / hangout friendly", "Zomato + Swiggy ready"]
   }
 ];
 const stats = [
   { label: "OUTLETS ACROSS INDIA", value: "40", suffix: "+", layout: "inline" },
   { label: "5-YEAR OUTLET VISION", value: "200", suffix: "+", layout: "center" },
-  { label: "STARTING INVESTMENT", value: "\u20B95.5", suffix: "L*", layout: "center" },
+  { label: "STARTING INVESTMENT", value: "₹5.5", suffix: "L", layout: "center" },
   { label: "FRANCHISE ROYALTY", value: "0", suffix: "%", layout: "inline" }
 ];
 const usps = [
-  { title: "Most Affordable Investment", desc: "Tea-caf\xE9 format priced for first-time founders." },
+  { title: "Most Affordable Investment", desc: "Tea-café format priced for first-time founders." },
   { title: "No Royalty Charges", desc: "Keep 100% of operational margins, every month." },
   { title: "POS Software Included", desc: "Billing, KOTs and reports out of the box." },
   { title: "Inventory Management", desc: "Track stock, wastage and reordering cleanly." },
@@ -88,7 +88,7 @@ const comparison = [
   { feat: "Royalty", indie: "\u2014", chai: "0% Royalty" }
 ];
 const faqs = [
-  { q: "What is the investment required for a Chaiway franchise?", a: "Investment starts from \u20B95.5 lakh* for the Kiosk format and goes up to \u20B99.5 lakh* for the Dine format. Final cost depends on city, area, interiors and equipment." },
+  { q: "What is the investment required for a Chaiway franchise?", a: "Investment starts from ₹5.5 lakh for the Kiosk format and goes up to ₹9.5 lakh for the Dine format. Final cost depends on city, area, interiors and equipment." },
   { q: "Does Chaiway charge royalty?", a: "No. Chaiway works on a 0% royalty franchise model." },
   { q: "What area is required?", a: "60\u2013100 sq. ft. for Kiosk, 100\u2013200 sq. ft. for Pro, and 300\u2013500 sq. ft. for Dine." },
   { q: "Which model is best for me?", a: "Our franchise team helps you pick the right model based on city tier, location, footfall and budget." },

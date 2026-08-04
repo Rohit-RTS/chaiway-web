@@ -31,7 +31,7 @@ const pillars = [
   {
     icon: TrendingUp,
     title: "Low Investment",
-    desc: "Start from just ₹5.5 Lakh*. Mass-market menu with high daily footfall potential.",
+    desc: "Start from just ₹5.5 Lakh. Mass-market menu with high daily footfall potential.",
     color: "from-chai-lime to-green-500",
     glow: "rgba(182,230,0,0.2)",
   },

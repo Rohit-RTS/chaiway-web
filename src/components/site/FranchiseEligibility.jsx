@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import { CheckCircle2, XCircle, ArrowRight } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight, HandCoins, Briefcase, Leaf, Home, Store, Flame } from "lucide-react";
 
 const eligibilityItems = [
   { req: "Age 21 and above", required: true },
@@ -20,32 +20,50 @@ const idealProfiles = [
   {
     title: "First-Time Business Owners",
     desc: "No experience needed. Chaiway's training and SOP system gets you up and running in weeks.",
-    emoji: "🚀",
+    icon: HandCoins,
+    badgeBg: "bg-gradient-to-br from-orange-500/20 via-amber-500/10 to-transparent",
+    border: "border-orange-500/30",
+    iconColor: "text-orange-400",
   },
   {
     title: "Working Professionals",
     desc: "Run the outlet with hired staff. The POS and daily reports keep you fully informed remotely.",
-    emoji: "💼",
+    icon: Briefcase,
+    badgeBg: "bg-gradient-to-br from-amber-500/20 via-yellow-500/10 to-transparent",
+    border: "border-amber-500/30",
+    iconColor: "text-amber-400",
   },
   {
     title: "Retired Individuals",
     desc: "A stable, low-risk business opportunity with steady daily footfall and simple operations.",
-    emoji: "🎯",
+    icon: Leaf,
+    badgeBg: "bg-gradient-to-br from-chai-lime/20 via-emerald-500/10 to-transparent",
+    border: "border-chai-lime/30",
+    iconColor: "text-chai-lime",
   },
   {
     title: "Family Businesses",
     desc: "A fantastic family-run venture. Café operations are streamlined for teams of 2–4.",
-    emoji: "👨‍👩‍👧",
+    icon: Home,
+    badgeBg: "bg-gradient-to-br from-rose-500/20 via-pink-500/10 to-transparent",
+    border: "border-rose-500/30",
+    iconColor: "text-rose-400",
   },
   {
     title: "Real Estate Owners",
     desc: "Already have a commercial space? Convert it into a Chaiway outlet for consistent returns.",
-    emoji: "🏪",
+    icon: Store,
+    badgeBg: "bg-gradient-to-br from-blue-500/20 via-indigo-500/10 to-transparent",
+    border: "border-blue-500/30",
+    iconColor: "text-blue-400",
   },
   {
     title: "Aspiring Entrepreneurs",
     desc: "Take your first big step into entrepreneurship with a proven brand and national presence.",
-    emoji: "✨",
+    icon: Flame,
+    badgeBg: "bg-gradient-to-br from-purple-500/20 via-violet-500/10 to-transparent",
+    border: "border-purple-500/30",
+    iconColor: "text-purple-400",
   },
 ];
 
@@ -71,14 +89,14 @@ export function FranchiseEligibility() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start mb-12 sm:mb-20">
           {/* Checklist */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-3xl border border-chai-orange/20 bg-chai-charcoal/60 p-8 text-center"
+            className="rounded-3xl border border-chai-orange/20 bg-chai-charcoal/60 p-5 sm:p-8"
           >
             <h3 className="font-display text-xl font-bold text-chai-cream mb-6 text-center">Requirements Checklist</h3>
             <div className="space-y-3">
@@ -117,23 +135,28 @@ export function FranchiseEligibility() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="font-display text-xl font-bold text-chai-cream mb-6 text-center">Who This Is Perfect For</h3>
-            <div className="grid gap-4">
-              {idealProfiles.map((p, i) => (
-                <motion.div
-                  key={p.title}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.07 }}
-                  className="flex flex-col items-center gap-3 rounded-2xl border border-chai-orange/12 bg-chai-charcoal/40 p-4 hover:border-chai-orange/30 hover:bg-chai-orange/5 transition-all duration-300 text-center"
-                >
-                  <span className="text-2xl shrink-0">{p.emoji}</span>
-                  <div className="text-center">
-                    <h4 className="font-semibold text-chai-cream text-sm text-center">{p.title}</h4>
-                    <p className="text-xs text-chai-muted mt-0.5 leading-relaxed text-center">{p.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
+              {idealProfiles.map((p, i) => {
+                const IconComponent = p.icon;
+                return (
+                  <motion.div
+                    key={p.title}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.07 }}
+                    className="flex flex-row items-center gap-3 sm:flex-col sm:items-center rounded-2xl border border-chai-orange/15 bg-chai-charcoal/60 p-4 sm:p-5 hover:border-chai-orange/40 hover:bg-chai-charcoal/90 transition-all duration-300 group"
+                  >
+                    <div className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border ${p.border} ${p.badgeBg} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
+                      <IconComponent className={`w-4 h-4 sm:w-5 sm:h-5 ${p.iconColor}`} />
+                    </div>
+                    <div className="text-left sm:text-center">
+                      <h4 className="font-bold text-chai-cream text-sm group-hover:text-chai-orange transition-colors">{p.title}</h4>
+                      <p className="text-xs text-chai-muted mt-0.5 sm:mt-1 leading-relaxed">{p.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>

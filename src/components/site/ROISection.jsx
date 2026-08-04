@@ -5,34 +5,34 @@ import { TrendingUp, IndianRupee, Clock, Users, Star } from "lucide-react";
 const roiCards = [
   {
     model: "Kiosk",
-    investment: "₹5.5L*",
+    investment: "₹5.5L",
     area: "60–100 sq.ft.",
     dailyOrders: "80–150",
     avgBill: "₹35–50",
     monthlyRevPotential: "₹90K–2L",
-    breakeven: "12–18 months*",
+    breakeven: "12–18 months",
     color: "border-chai-orange/30 from-chai-orange/8",
     badge: null,
   },
   {
     model: "Pro",
-    investment: "₹7.5L*",
+    investment: "₹7.5L",
     area: "100–200 sq.ft.",
     dailyOrders: "150–300",
     avgBill: "₹50–80",
     monthlyRevPotential: "₹2L–4.5L",
-    breakeven: "10–15 months*",
+    breakeven: "10–15 months",
     color: "border-chai-orange from-chai-orange/15",
     badge: "Most Popular",
   },
   {
     model: "Dine",
-    investment: "₹9.5L*",
+    investment: "₹9.5L",
     area: "300–500 sq.ft.",
     dailyOrders: "200–400",
     avgBill: "₹80–150",
     monthlyRevPotential: "₹3L–7L",
-    breakeven: "12–20 months*",
+    breakeven: "12–20 months",
     color: "border-chai-gold/30 from-chai-gold/8",
     badge: null,
   },
@@ -79,7 +79,7 @@ export function ROISection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className={`relative rounded-3xl border bg-gradient-to-b ${card.color} p-7 overflow-hidden text-center`}
+              className={`relative rounded-3xl border bg-gradient-to-b ${card.color} p-5 sm:p-7 overflow-hidden text-center`}
             >
               {/* Top Row — aligned in one line and splitted */}
               <div className="flex items-center justify-between w-full mb-3 min-h-[28px]">
@@ -153,7 +153,7 @@ export function ROISection() {
         </div>
 
         <p className="mt-8 text-center text-xs text-chai-muted/80 max-w-3xl mx-auto leading-relaxed">
-          *Figures are indicative estimates only. Revenue and ROI depend on location, rent, operations, staff, local demand and footfall. Final investment may vary by city and setup requirements.
+          Figures are indicative estimates only. Revenue and ROI depend on location, rent, operations, staff, local demand and footfall. Final investment may vary by city and setup requirements.
         </p>
       </div>
     </section>

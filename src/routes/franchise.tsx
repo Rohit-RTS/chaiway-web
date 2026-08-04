@@ -40,7 +40,7 @@ export const Route = createFileRoute("/franchise")({
               name: "What is the investment required for a Chaiway franchise?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Investment starts from ₹5.5 lakh* for the Kiosk format, ₹7.5 lakh* for Pro format, and up to ₹9.5 lakh* for the Dine format.",
+                text: "Investment starts from ₹5.5 lakh for the Kiosk format, ₹7.5 lakh for Pro format, and up to ₹9.5 lakh for the Dine format.",
               },
             },
             {
