@@ -35,17 +35,6 @@ const menuCategories = [
     ]
   },
   {
-    id: "snacks",
-    name: "Snacks",
-    tagline: "Quick Café Snacks",
-    items: [
-      { name: "Veg Grilled Sandwich", price: "35" },
-      { name: "Cheese Sandwich", price: "45" },
-      { name: "French Fries", price: "49" },
-      { name: "Garlic Bread", price: "59" }
-    ]
-  },
-  {
     id: "lassi",
     name: "Lassi & Desserts",
     tagline: "Chilled Matka Lassi & Kulfi",

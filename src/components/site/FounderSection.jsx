@@ -105,7 +105,7 @@ export function FounderSection() {
                 <p className="font-bold text-chai-cream text-sm sm:text-base lg:text-lg group-hover:text-chai-orange transition-colors truncate">
                   Aba Patil Londhe
                 </p>
-                <p className="text-xs sm:text-sm text-chai-gold font-semibold leading-snug">Founder &amp; Managing Director, Chaiway Café</p>
+                <p className="text-xs sm:text-sm text-chai-gold font-semibold leading-snug">CEO &amp; Founder</p>
                 <p className="text-[11px] text-chai-muted mt-0.5">Foodlok Foods &amp; Beverages Pvt. Ltd.</p>
                 <p className="text-[11px] text-chai-orange font-medium mt-1.5 inline-flex items-center gap-1 group-hover:underline">
                   <Instagram className="w-3 h-3" /> View Instagram →
