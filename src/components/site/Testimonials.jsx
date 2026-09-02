@@ -112,9 +112,9 @@ export function Testimonials() {
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
-              initial={{ opacity: 0, x: 40, filter: "blur(4px)" }}
-              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, x: -40, filter: "blur(4px)" }}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -40 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="relative rounded-3xl border border-chai-orange/20 bg-chai-charcoal/70 p-8 sm:p-12 backdrop-blur-sm shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
             >

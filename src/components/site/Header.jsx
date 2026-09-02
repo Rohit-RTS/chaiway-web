@@ -160,9 +160,9 @@ function Header() {
             {/* Slide-Down Menu Panel */}
             <motion.div
               key="mobile-menu"
-              initial={{ y: -20, opacity: 0, filter: "blur(8px)" }}
-              animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              exit={{ y: -20, opacity: 0, filter: "blur(8px)" }}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               className="lg:hidden absolute top-full inset-x-0 z-50 border-t border-chai-orange/15 bg-chai-black/98 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
             >

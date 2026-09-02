@@ -13,17 +13,18 @@ export function Preloader() {
           clearInterval(interval);
           return 100;
         }
-        // Random incremental steps for natural feel
-        const diff = Math.floor(Math.random() * 15) + 10;
+        // Random incremental steps for natural feel, but faster
+        const diff = Math.floor(Math.random() * 20) + 15;
         return Math.min(prev + diff, 100);
       });
-    }, 60);
+    }, 40);
 
     const handleLoad = () => {
       setProgress(100);
     };
 
     if (document.readyState === "complete") {
+      // If already loaded, jump quickly
       setProgress(100);
     } else {
       window.addEventListener("load", handleLoad);
@@ -39,7 +40,7 @@ export function Preloader() {
     if (progress === 100) {
       const timer = setTimeout(() => {
         setIsLoading(false);
-      }, 350);
+      }, 150); // reduced from 350ms
       return () => clearTimeout(timer);
     }
   }, [progress]);
@@ -51,7 +52,7 @@ export function Preloader() {
           key="chaiway-preloader"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.03 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#080604] overflow-hidden select-none"
         >
           {/* Ambient Radial Background Glow */}
